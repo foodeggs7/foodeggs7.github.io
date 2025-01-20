@@ -6,3 +6,14 @@
     position: relative;
     height: 70px;
 }
+
+.lang-nl {
+    display: initial;
+}
+
+.hero {
+
+    height: calc(100vh - 70px);
+    width: 100%;
+    background-color: aqua;
+}
