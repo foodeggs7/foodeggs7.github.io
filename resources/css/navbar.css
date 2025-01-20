@@ -14,7 +14,7 @@
     justify-content: right;
     box-shadow: 1px 1px 9px 1px gray;
     position: fixed;
-
+    z-index: 2000;
 }
 
 .scrolling {
