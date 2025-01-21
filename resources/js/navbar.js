@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         if (HamMenu.style.display == "none") {
                             HamMenu.style.display = "flex"
                         } else {
-                            HamMenu.style.display = "flex"
+                            HamMenu.style.display = "none"
 
                         }
 
