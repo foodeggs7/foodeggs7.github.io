@@ -1,0 +1,34 @@
+:root {
+    --Sec2: #055a4a;
+    --Sec: #06c46f;
+    --CornerRadius: 10px;
+    --TextColor1: #333333;
+    --TextColor2: #ffffff;
+}
+
+.project-main {
+    padding: 10%;
+    padding-top: 10px;
+    
+}
+
+.project-content {
+    border: 2px solid var(--Sec2);
+    border-radius: var(--CornerRadius);
+    overflow: hidden;
+}
+
+.project-Title {
+  background-color: var(--Sec2);
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.project-actions {
+    width: 30%;
+}
+
+.project-back {
+    width: 50px;
+}

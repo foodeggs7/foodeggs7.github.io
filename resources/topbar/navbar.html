@@ -6,6 +6,7 @@
 		<title>hello, world</title>
         <link rel="stylesheet" href="../css/navbar.css">
         <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
         <meta name="viewport" content="width=device-width,initial-scale=1">
 
 	</head>
@@ -21,20 +22,39 @@
                 </ul> 
             </div>
             <div class="navbar-right">
-                <ul>
+                <select id="langSelector">
+                    <option value="en">English</option>
+                    <option value="nl">dutch</option>
+                </select>
+                <ul class="Desktop-NavButtons">
                      <li>
-                        <select id="langSelector">
-                            <option value="en">English</option>
-                            <option value="nl">dutch</option>
-                        </select>
                         <a href="https://foodeggs7.github.io/roblox" class="navButton">roblox</a>
+                     </li>
+                     <li>
                          <a lang="en" href="https://foodeggs7.github.io/projects" class="lang lang-en navButton">projects</a>
+                     </li>
+                     <li>
                          <a lang="nl" href="https://foodeggs7.github.io/projects" class="lang lang-nl navButton">projecten</a>
                      </li>
                  </ul> 
+                 <i class="hamburger ri-menu-line" id="Hamburger-Toggle"></i>
              </div>
             
         </header>
+
+        <menu id="HamburgerMenu">
+            <ul>
+                <li>
+                    <a href="https://foodeggs7.github.io/roblox" class="navButton-Hamburger">roblox</a>
+                </li>
+                <li>
+                    <a lang="en" href="https://foodeggs7.github.io/projects" class="lang lang-en navButton-Hamburger">projects</a>
+                </li>
+                <li>
+                    <a lang="nl" href="https://foodeggs7.github.io/projects" class="lang lang-nl navButton-Hamburger">projecten</a>
+                </li>
+            </ul>
+        </menu>
         <div id="header">
             <!-- this will be a sort of padding so page content not disapear behind the dymaticalty loaded header-->
         </div>
