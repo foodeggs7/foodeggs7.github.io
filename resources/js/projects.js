@@ -14,11 +14,11 @@ console.log(IdNum); // Converts "id" to a number and logs it
             if (data) {
 
                 function load() {
-                    document.getElementById('Project-Title-En').textContent = data.Title-en
-                    document.getElementById('Thumb-En').src = data.thumb-en
-                    document.getElementById('Project-Info-En') = data.description-en
+                    document.getElementById('Project-Title-En').textContent = data.TitleEn
+                    document.getElementById('Thumb-En').src = data.thumbEn
+                    document.getElementById('Project-Info-En') = data.descriptionEn
 
-                    
+
 
                 }
 

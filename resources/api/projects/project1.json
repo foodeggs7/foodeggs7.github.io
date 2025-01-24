@@ -6,26 +6,26 @@
 
     "openSource": true,
 
-    "Title-nl": "titel is dit",
-    "Title-en": "title this",
+    "TitleNl": "titel is dit",
+    "TitleEn": "title this",
 
-    "Thumb-nl": "",
-    "thumb-en": "",
+    "ThumbNl": "",
+    "thumbEn": "",
 
-    "description-nl": "",
-    "description-en": "",
+    "descriptionNl": "",
+    "descriptionEn": "this is the description lol",
 
     "commends": {
-        "total-nl": 1,
-        "total-en": 2,
+        "totalNl": 1,
+        "totalEn": 2,
         "template1": {
             "userThumb": "",
             "userName": "",
             "date": "01-04-2025",
             "time": "01:30",
             "UTC": -2,
-            "content-En": "",
-             "content-Nl": ""
+            "contentEn": "",
+             "contentNl": ""
         },
         "template2": {
             "userThumb": "",
@@ -33,8 +33,8 @@
             "date": "01-04-2025",
             "time": "01:30",
             "UTC": -2,
-            "content-En": "",
-             "content-Nl": ""
+            "contentEn": "",
+             "contentNl": ""
         }
     }
 }
