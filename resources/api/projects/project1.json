@@ -1,0 +1,40 @@
+{
+    "Date": "01-02-2025",
+    "Time": "00:00",
+    "UpdDate": "01-03-2025",
+    "UpdTime": "00:00",
+
+    "openSource": true,
+
+    "Title-nl": "titel is dit",
+    "Title-en": "title this",
+
+    "Thumb-nl": "",
+    "thumb-en": "",
+
+    "description-nl": "",
+    "description-en": "",
+
+    "commends": {
+        "total-nl": 1,
+        "total-en": 2,
+        "template1": {
+            "userThumb": "",
+            "userName": "",
+            "date": "01-04-2025",
+            "time": "01:30",
+            "UTC": -2,
+            "content-En": "",
+             "content-Nl": ""
+        },
+        "template2": {
+            "userThumb": "",
+            "userName": "",
+            "date": "01-04-2025",
+            "time": "01:30",
+            "UTC": -2,
+            "content-En": "",
+             "content-Nl": ""
+        }
+    }
+}

@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     function changeLanguage(languageCode) {
                         Array.from(document.getElementsByClassName('lang')).forEach(function (elem) {
                             if (elem.classList.contains('lang-' + languageCode)) {
-                                elem.style.display = 'flex';
+                                elem.style.display = 'block';
                             }
                             else {
                                 elem.style.display = 'none';
@@ -73,11 +73,15 @@ document.addEventListener('DOMContentLoaded', function () {
                     const HamMenu = document.getElementById('HamburgerMenu')
 
                     hamburgerButon.addEventListener('click', () => {
+
                         if (HamMenu.style.display == "none") {
                             HamMenu.style.display = "flex"
+                            hamburgerButon.classList.add('ri-close-line');
+                            hamburgerButon.classList.remove('ri-menu-line');
                         } else {
                             HamMenu.style.display = "none"
-
+                            hamburgerButon.classList.remove('ri-close-line');
+                            hamburgerButon.classList.add('ri-menu-line');
                         }
 
 

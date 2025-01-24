@@ -1,10 +1,12 @@
 :root {
     --navbarBG: #055a4a;
     --navbarButton: #ffffff;
+    --cta: #06c46f;
     --CornerRadiusNavBarButtons: 10px;
     --CornerRadius: 10px;
     --TextColor1: #333333;
     --TextColor2: #ffffff;
+
 }
 
 #NavBar {
@@ -78,25 +80,47 @@
 .navButton {
     text-decoration: none;
     width: 100px;
-    height: 20px;
+
     font-size: 20px;
-    text-align: center;
+    text-align: center!important;
     border-radius: var(--CornerRadiusNavBarButtons);
-    color: var(--TextColor1);
-    border-bottom: 2px solid var(--TextColor1);
-    background-color: var(--navbarButton);
+    color: var(--TextColor2);
+ 
     margin: 5px;
+    padding: 10px 0; /* Adds vertical padding to create space around the text */
+    position: relative;
+    transition: color 0.55s ease; /* Smooth transition for text color */
 }
+
+.navButton::after {
+    content: ''; /* Empty content for the pseudo-element */
+    position: absolute; /* Position it relative to the parent */
+    bottom: 0; /* Align to the bottom of the parent */
+    left: 50%; /* Center it horizontally */
+    width: 100%; /* Width of the underline */
+    height: 5px; /* Height of the underline */
+    background-color: var(--cta); /* Color of the underline */
+    border-radius: 5px; /* Rounded corners */
+    transform: translateX(-50%) scaleX(0); /* Initially hidden by scaling */
+    transition: transform 0.55s ease; /* Smooth transition for hover effect */
+  }
+
+  .navButton:hover::after {
+    transform: translateX(-50%) scaleX(1); /* Scale to full width on hover */
+  }
 
 .navButton-Hamburger {
     text-decoration: none;
+    min-width: 80%;
     max-width: 100%;
-    font-size: 50px;
+    font-size: 35px;
+    font-weight: 600;
     text-align: center;
     color: var(--TextColor2);
-    border-bottom: 2px solid var(--TextColor2);
+    /*border-bottom: 2px solid var(--TextColor2);*/
     padding: 5px;
-    margin-top: 5px;
+    margin: 15px;
+    
 }
 
 .hamburger {
@@ -108,11 +132,12 @@
 }
 
 #HamburgerMenu {
- height: calc(100vh - 170px);
- width: 40%;
+ /*height: calc(100vh - 170px);*/
+ position: fixed;
  background-color: var(--navbarBG);
- position: absolute;
- right: 0;
+width: auto;
+ box-sizing: border-box; /* Ensure padding doesn't add to width */
+ right: -30000px;
  margin-top: 70px;
  padding-top: 10px;
  border-bottom-left-radius: var(--CornerRadius);
@@ -120,18 +145,19 @@
  flex-direction: column;
     justify-content: start;
     align-items: center;
+    align-content: center;
     padding: 0;
 
 }
 
 #HamburgerMenu ul {
-    display: flex;
+  display: flex;
+  flex-direction: column;
     list-style-type: none;
-    flex-direction: column;
-    justify-content: start;
+    padding: 15px;
     align-items: center;
-    padding: 0;
 }
+
 
 
 @media (max-width: 800px) {
@@ -143,5 +169,9 @@
 
     .hamburger {
         display: block;
+    }
+
+    #HamburgerMenu {
+        right: 0;
     }
 }

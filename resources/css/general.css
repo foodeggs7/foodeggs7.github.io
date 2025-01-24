@@ -3,8 +3,14 @@
     --Sec: #06c46f;
 }
 
+body {
+    overflow-x: hidden;
+    max-width: 100%; /* Prevent overflow */
+   
+}
 * {
     margin: 0;
+    box-sizing: border-box;
 }
 
 #header{
