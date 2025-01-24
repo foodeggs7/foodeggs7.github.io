@@ -25,6 +25,20 @@
   flex-direction: row;
 }
 
+.project-content-styles img {
+  width: 100%;
+  height: auto;
+}
+
+.project-content-styles h1,
+.project-content-styles h2,
+.project-content-styles h3,
+.project-content-styles h4,
+.project-content-styles h5,
+.project-content-styles h6{
+  color: var(--Sec2);
+}
+
 .ProjectTitle {
     font-size: 20px;
     color: var(--TextColor2);
