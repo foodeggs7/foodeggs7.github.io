@@ -18,7 +18,7 @@ console.log(data)
                 function load() {
                     document.getElementById('Project-Title-En').textContent = data.TitleEn
                     document.getElementById('Thumb-En').src = data.thumbEn
-                    document.getElementById('Project-Info-En').textContent = data.descriptionEn
+                    document.getElementById('Project-Info-En').innerHTML = data.descriptionEn
 
 
 
