@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (data) {
 
+
                 document.getElementById('header').innerHTML = data;
                 setTimeout(() => {
                     const Nav = document.getElementById('NavBar')

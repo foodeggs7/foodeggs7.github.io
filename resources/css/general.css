@@ -3,6 +3,8 @@
     --Sec: #06c46f;
     --secBG: #e6f7f0;
     --Corners: 16px;
+    --TextColor1: #333333;
+    --TextColor2: #ffffff;
 }
 
 body {
@@ -45,6 +47,7 @@ body {
 
 .popupFrame {
     display: none;
+    flex-direction: column;
 }
 
 #popup {
@@ -56,10 +59,9 @@ body {
     top: calc(50% - 150px);
     border-radius: var(--Corners);
     overflow: hidden;
-    overflow-y: scroll;
-    scrollbar-width: none;
     display: none;
-    flex-direction: column;
+    flex-direction: column; 
+ 
 }
 
 .popup-topbar {
@@ -70,10 +72,99 @@ body {
     padding-left: 40px;
 }
 
+.popup-topbar h3{
+    color: var(--TextColor2);
+}
+
 .popup-close {
     font-size: 50px;
     position: fixed;
     left: calc(50% + 250px - 40px) ;
     top: calc(50% - 150px - 15px);
     color: red;
+}
+
+.popup-content {
+    width: 100%;
+    height: 300px;
+    max-height: 100%;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.popup-content a {
+    width: auto;
+    padding: 5px;
+    height: auto;
+    font-size: medium;
+    text-decoration: none;
+    border-bottom: 1px solid var(--Sec);
+    color: var(--Sec);
+    text-align: center;
+}
+
+.popup-content a:visited,
+.popup-content a:hover {
+    color: var(--Sec2);
+    border-bottom: 1px solid var(--Sec2);
+}
+
+#Loading {
+    display: flex;
+    position: fixed;
+    z-index: 999999999;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.js-1 {
+    font-size: 50;
+    color: blue;
+}
+
+.js-2 {
+    font-size: 50;
+    color: cyan;
+}
+
+.js-string {
+    font-size: 50;
+    color: greenyellow; 
+}
+
+.LoadingIndicator {
+    font-size: 50;
+    color: white;
+}
+@media (max-width: 800px) {
+    #popup {
+        width: 250px;
+        height: 150px;
+        left: calc(50% - 125px);
+        top: calc(50% - 57px);
+
+     
+    }
+
+    .popup-close {
+        font-size: 25px;
+        position: fixed;
+        left: calc(50% + 125px - 20px) ;
+        top: calc(50% - 57px - 5px);
+        color: red;
+    }
+
+    .popup-topbar h3{
+        color: var(--TextColor2);
+        font-size: 15px;
+    }
 }
