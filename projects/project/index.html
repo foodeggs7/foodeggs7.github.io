@@ -26,7 +26,8 @@
                             <i class="project-back ri-arrow-left-fill"></i>
                             <h2 class="ProjectTitle" id="Project-Title-En">dit is een heele langen project title dat je hier ziet zo ehm ja</h2>
                             <div class="project-actions">
-                                <i class="ri-download-2-fill"></i>
+                                <i class="ri-download-2-fill" id="download-Button"></i>
+                                <i class="ri-global-line" id="links-Button"></i>
                             </div>
                         </div>
                         <div class="project-thumbnail">
@@ -35,6 +36,19 @@
                         </div>
                         <div id="project-info">
                             <div class="project-content-styles" id="Project-Info-En">this should be added from an json</div>
+                            <br>
+                            <hr>
+                            <div class="project-Date">
+                                <div class="project-Date-date">
+                                <p id="Start-Data-date">Project started:01-07-2023 | 00:56 | UTC +1 </p>
+                                <p id="Update-Data-date">Project Updated:01-07-2023 | 00:56 | UTC +1 </p>
+                            </div>
+                            <div class="project-Date-post">
+                                <p id="Start-Data-post">Posted:01-07-2023 | 00:56 | UTC +1 </p>
+                                <p id="Update-Data-post">post Updated:01-07-2023 | 00:56 | UTC +1 </p>
+                            </div>
+                            </div>
+                            
 
                         </div>
 
@@ -68,8 +82,57 @@
 
     </section>
 
+    <section class="popup" id="popup">
+        <div id="popup-links" class="popupFrame">
+            <div class="popup-topbar">
+                  <h3 class="lang lang-en">links including with this project</h3>
+                  <h3 class="lang lang-nl">linkjes die bij dit project horen</h3>
+                  <i class="ri-close-circle-fill popup-close"></i>
+            </div>
+            <div id="popup-links-content">
+
+            </div>
+        </div>
+
+        <div id="popup-downloads" class="popupFrame">
+            <div class="popup-topbar">
+                  <h3 class="lang lang-en">download files from this project</h3>
+                  <h3 class="lang lang-nl">download de bestanden die bij dit project horen</h3>
+                  <i class="ri-close-circle-fill popup-close"></i>
+            </div>
+            <div id="popup-links-content">
+
+            </div>
+        </div>
+    </section>
+
     <script src="../../resources/js/navbar.js"></script>
     <script src="../../resources/js/projects.js"></script>
+    <script src="../../resources/js/popup-close.js"></script>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const linkButton = document.getElementById('links-Button')
+            const linkPopup = document.getElementById('popup-links')
+
+            const dlButton = document.getElementById('download-Button')
+            const dlPopup = document.getElementById('popup-downloads')
+
+            const popup = document.getElementById('popup')
+
+            linkButton.addEventListener('click', () => {
+                linkPopup.style.display = "flex"
+                popup.style.display = "flex"
+            })
+
+            dlButton.addEventListener('click', () => {
+                dlPopup.style.display = "flex"
+                popup.style.display = "flex"
+            })
+        })
+
+    </script>
 </body>
 
 </html>

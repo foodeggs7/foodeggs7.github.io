@@ -7,23 +7,12 @@
     "PostTime": "16:50",
     "postUpdDate": "24-1-2025",
     "postUpdTime": "16:55",
+    "UTC": 1,
 
-    "openSource": false,
-    "files": {
-      "amount": 1,
-      "1": {
-        "name": "",
-        "url": ""
-      }
-    },
-    "webpage": true,
-     "links": {
-      "amount": 1,
-      "1": {
-        "name": "",
-        "url": ""
-      }
-    },
+    "openSource": true,
+    "files": "<a href=\"../../../resources/downloads/lol.css\" download=\"lol.css\"> link 1</a><a href=\"../../../resources/downloads/lol.css\" download=\"lol.css\"> link 2</a>",
+     "webpage": true,
+     "links": "<a href=\"https://unviere.github.io/Unviere\">web link 1</a><a href=\"https://unviere.github.io/Unviere\">web link 2</a>",
 
     "TitleNl": "titel is dit",
     "TitleEn": "first models i made",
