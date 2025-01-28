@@ -10,12 +10,12 @@
     "UTC": 1,
 
     "openSource": false,
-    "files-EN": "<a href=\"../../../resources/downloads/lol.css\" download=\"lol.css\"> link 1</a><a href=\"../../../resources/downloads/lol.css\" download=\"lol.css\"> link 2</a>",
-    "files-NL": "<a href=\"../../../resources/downloads/lol.css\" download=\"lol.css\"> link 1</a><a href=\"../../../resources/downloads/lol.css\" download=\"lol.css\"> link 2</a>",
+    "filesEN": "<a href=\"../../../resources/downloads/lol.css\" download=\"lol.css\"> link 1</a><a href=\"../../../resources/downloads/lol.css\" download=\"lol.css\"> link 2</a>",
+    "filesNL": "<a href=\"../../../resources/downloads/lol.css\" download=\"lol.css\"> link 1</a><a href=\"../../../resources/downloads/lol.css\" download=\"lol.css\"> link 2</a>",
      "webpage": true,
-     "links-EN": "<a href=\"https://create.roblox.com/store/asset/10744642891/ackerswoude-rijtjes-huis-nr-39-tm-47\">row houses 1</a><a href=\"https://create.roblox.com/store/asset/10669895603\">mega house with underground garage</a><a href=\"https://create.roblox.com/store/asset/11027960652/closet-2-kast\">closet with doors</a>",
+     "linksEN": "<a href=\"https://create.roblox.com/store/asset/10744642891/ackerswoude-rijtjes-huis-nr-39-tm-47\">row houses 1</a><a href=\"https://create.roblox.com/store/asset/10669895603\">mega house with underground garage</a><a href=\"https://create.roblox.com/store/asset/11027960652/closet-2-kast\">closet with doors</a>",
 
-     "links-NL": "",
+     "linksNL": "",
     "TitleNl": "mijn eerste models",
     "TitleEn": "first models i made",
 
