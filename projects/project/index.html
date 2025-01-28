@@ -19,22 +19,29 @@
     </div>
     <section class="project">
         <div class="project-main">
-            <article>
+            <article id="ProjectRoot">
                 <section class="project-first">
-                    <div class="project-content">
+                    <div class="project-content" >
                         <div class="project-Title">
                             <i class="project-back ri-arrow-left-fill"></i>
-                            <h2 class="ProjectTitle lang lang-en" id="Project-Title-En">this a very long project title thats loading...</h2>
-                            <h2 class="ProjectTitle lang lang-nl" id="Project-Title-Nl">dit is een heele lange project title dat aan het laden is...</h2>
+                            <h2 class="ProjectTitle lang lang-en" id="Project-Title-En">this a very long project title
+                                thats loading...</h2>
+                            <h2 class="ProjectTitle lang lang-nl" id="Project-Title-Nl">dit is een heele lange project
+                                title dat aan het laden is...</h2>
 
                             <div class="project-actions">
-                                <i class="ri-download-2-fill" id="download-Button"></i>
-                                <i class="ri-global-line" id="links-Button"></i>
+                                <div id="download-Button">
+                                    <i class="ri-download-2-fill"></i>
+                                </div>
+                                <div id="links-Button">
+                                    <i class="ri-global-line"></i>
+                                </div>
+
                             </div>
                         </div>
                         <div class="project-thumbnail">
-                            <img id="Thumb-En" class="lang lang-en" src="" alt="hi">
-                            <img id="Thumb-Nl" class="lang lang-nl" src="" alt="hi">
+                            <img id="Thumb-En" class="lang lang-en" src="" alt="the thumbnail from the project">
+                            <img id="Thumb-Nl" class="lang lang-nl" src="" alt="de project thumbnail">
 
                         </div>
                         <div id="project-info">
@@ -45,21 +52,27 @@
                             <hr>
                             <div class="project-Date">
                                 <div class="project-Date-date">
-                                <p id="Start-Data-date-EN" class="lang lang-en">Project started: N/A | N/A | UTC N/A </p>
-                                <p id="Start-Data-date-NL" class="lang lang-nl">Project gestart: N/A | N/A | UTC N/A </p>
+                                    <p id="Start-Data-date-EN" class="lang lang-en">Project started: N/A | N/A | UTC N/A
+                                    </p>
+                                    <p id="Start-Data-date-NL" class="lang lang-nl">Project gestart: N/A | N/A | UTC N/A
+                                    </p>
 
-                                <p id="Update-Data-date-EN" class="lang lang-en">Project Updated: N/A | N/A | UTC N/A </p>
-                                <p id="Update-Data-date-NL" class="lang lang-nl">Project bijgewerkt: N/A | N/A | UTC N/A </p>
-                            </div>
-                            <div class="project-Date-post">
-                                <p id="Start-Data-post-EN" class="lang lang-en">Posted: N/A | N/A | UTC N/A</p>
-                                <p id="Start-Data-post-NL" class="lang lang-nl">geplaats: N/A | N/A | UTC N/A</p>
+                                    <p id="Update-Data-date-EN" class="lang lang-en">Project Updated: N/A | N/A | UTC
+                                        N/A </p>
+                                    <p id="Update-Data-date-NL" class="lang lang-nl">Project bijgewerkt: N/A | N/A | UTC
+                                        N/A </p>
+                                </div>
+                                <div class="project-Date-post">
+                                    <p id="Start-Data-post-EN" class="lang lang-en">Posted: N/A | N/A | UTC N/A</p>
+                                    <p id="Start-Data-post-NL" class="lang lang-nl">geplaats: N/A | N/A | UTC N/A</p>
 
-                                <p id="Update-Data-post-EN" class="lang lang-en">post Updated: N/A | N/A | UTC N/A </p>
-                                <p id="Update-Data-post-NL" class="lang lang-nl">post bijgewerkt: N/A | N/A | UTC N/A </p>
+                                    <p id="Update-Data-post-EN" class="lang lang-en">post Updated: N/A | N/A | UTC N/A
+                                    </p>
+                                    <p id="Update-Data-post-NL" class="lang lang-nl">post bijgewerkt: N/A | N/A | UTC
+                                        N/A </p>
+                                </div>
                             </div>
-                            </div>
-                            
+
 
                         </div>
 
@@ -67,23 +80,44 @@
 
 
 
+                    <template id="Commend-EN">
+                        <section class="comment lang lang-en">
+                            <div class="comment-main">
+                                <div class="comment-info">
+                                    <div class="comment-info-left">
+                                        <img class="User-Pic" src="" alt="the user profile picture">
+                                        <h3 class="user-name">onlytwentycharacters</h3>
+                                    </div>
+                                    <div class="comment-info-right">
+                                        <p class="comment-date">01-20-2025 | 00:00 | -2 UTC</p>
+                                    </div>
 
-                    <section class="comment">
-                        <div class="comment-main">
-                            <div class="comment-info">
-                            <div class="comment-info-left">
-                                <img src="" alt="user">
-                                <h3 class="user-name">onlytwentycharacters</h3>
+                                </div>
+                                <p class="comment-content">lol</p>
                             </div>
-                            <div class="comment-info-right">
-                                <p class="comment-date">01-20-2025 | 00:00 | -2 UTC</p>
+
+                        </section>
+                    </template>
+
+                    <template id="Commend-NL">
+                        <section class="comment lang lang-nl">
+                            <div class="comment-main">
+                                <div class="comment-info">
+                                    <div class="comment-info-left">
+                                        <img class="User-Pic" src="" alt="de profiel foto van de gebruiker">
+                                        <h3 class="user-name">onlytwentycharacters</h3>
+                                    </div>
+                                    <div class="comment-info-right">
+                                        <p class="comment-date">01-20-2025 | 00:00 | -2 UTC</p>
+                                    </div>
+
+                                </div>
+                                <p class="comment-content">lol</p>
                             </div>
-                            
-                        </div>
-                        <p class="comment-content">lol</p>
-                        </div>
-                        
-                    </section>
+
+                        </section>
+                    </template>
+
 
             </article>
 
@@ -96,35 +130,50 @@
     <section class="popup" id="popup">
         <div id="popup-links" class="popupFrame">
             <div class="popup-topbar">
-                  <h3 class="lang lang-en">links including with this project</h3>
-                  <h3 class="lang lang-nl">linkjes die bij dit project horen</h3>
-                  <i class="ri-close-circle-fill popup-close"></i>
+                <h3 class="lang lang-en">links including with this project</h3>
+                <h3 class="lang lang-nl">linkjes die bij dit project horen</h3>
+                <i class="ri-close-circle-fill popup-close"></i>
             </div>
-            <div id="popup-links-content" class="popup-content">
+            <div id="popup-links-content">
+                <div class="lang lang-en popup-content">
+                    <div id="popup-links-content-EN" class="popup-content">
 
+                    </div>
+                </div>
+
+                <div i class="lang lang-nl">
+                    <div id="popup-links-content-NL" class="popup-content">
+
+                    </div>
+                </div>
             </div>
         </div>
 
         <div id="popup-downloads" class="popupFrame">
             <div class="popup-topbar">
-                  <h3 class="lang lang-en">download files from this project</h3>
-                  <h3 class="lang lang-nl">download de bestanden die bij dit project horen</h3>
-                  <i class="ri-close-circle-fill popup-close"></i>
+                <h3 class="lang lang-en">download files from this project</h3>
+                <h3 class="lang lang-nl">download de bestanden die bij dit project horen</h3>
+                <i class="ri-close-circle-fill popup-close"></i>
             </div>
             <div id="popup-downloads-content">
-                <div id="popup-downloads-content-EN" class="lang lang-en popup-content">
+                <div class="lang lang-en popup-content">
+                    <div id="popup-downloads-content-EN" class="popup-content">
 
+                    </div>
                 </div>
 
-                <div id="popup-downloads-content-NL" class="lang lang-nl popup-content">
-                    
+                <div i class="lang lang-nl">
+                    <div id="popup-downloads-content-NL" class="popup-content">
+
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="Loading">
-        <div class="LoadingIndicator"><span class="js-1">console</span>.<span class="js-2">log</span>(<span class="js-string">"hello, world"</span>)</div>
+        <div class="LoadingIndicator"><span class="js-1">console</span>.<span class="js-2">log</span>(<span
+                class="js-string">"hello, world"</span>)</div>
     </section>
 
     <script src="../../resources/js/KillLoadingScreen.js"></script>
@@ -132,7 +181,7 @@
     <script src="../../resources/js/navbar.js"></script>
     <script src="../../resources/js/projects.js"></script>
     <script src="../../resources/js/popup-close.js"></script>
-    
+
     <script>
 
         document.addEventListener('DOMContentLoaded', function () {

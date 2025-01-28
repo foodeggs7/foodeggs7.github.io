@@ -20,20 +20,27 @@ document.addEventListener('DOMContentLoaded', function () {
                     document.getElementById('Project-Title-Nl').textContent = data.TitleNl
 
                     if (data.openSource) {
-                        document.getElementById('download-Button').display = "flex"
+                        console.log('show')
+                        document.getElementById('download-Button').style.display = "flex"
                     } else {
-                        document.getElementById('download-Button').display = "none"
+                        console.log('hide')
+                        document.getElementById('download-Button').style.display = "none"
                     }
 
                     document.getElementById('popup-downloads-content-EN').innerHTML = data.filesEN
+                    document.getElementById('popup-downloads-content-NL').innerHTML = data.filesNL
 
                     if (data.webpage) {
-                        document.getElementById('links-Button').display = "flex"
+                        console.log('show')
+                        document.getElementById('links-Button').style.display = "flex"
                     } else {
-                        document.getElementById('links-Button').display = "none"
+                        console.log('hide')
+                        document.getElementById('links-Button').style.display = "none"
                     }
 
-                    document.getElementById('popup-links-content').innerHTML = data.linksEN
+                    document.getElementById('popup-links-content-EN').innerHTML = data.linksEN
+                    document.getElementById('popup-links-content-NL').innerHTML = data.linksNL
+
 
                     document.getElementById('Thumb-En').src = data.thumbEn
                     document.getElementById('Thumb-Nl').src = data.ThumbNl
@@ -51,6 +58,40 @@ document.addEventListener('DOMContentLoaded', function () {
                     document.getElementById('Update-Data-date-NL').textContent = `Project bijgewerkt: ${data.UpdDate} | ${data.UpdTime} | UTC ${data.UTC}`
                     document.getElementById('Start-Data-post-NL').textContent = `geplaats: ${data.PostDate} | ${data.PostTime} | UTC ${data.UTC}`
                     document.getElementById('Update-Data-post-NL').textContent = `post bijgewerkt: ${data.postUpdDate} | ${data.postUpdTime} | UTC ${data.UTC}`
+
+                    for (let i = 1; i <= data.commends.totalEn; i++) {
+                        var Comment = document.getElementById('Commend-EN').content
+                        var NewComent = document.importNode(Comment, true)
+
+                        let templateKey = `template${i}`; // Dynamically build the key (e.g., template1, template2)
+                        console.log(templateKey)
+                        let Dataroot = data.commends[templateKey];
+                        console.log(Dataroot)
+
+                        NewComent.querySelector('.User-Pic').src = Dataroot.userThumb
+                        NewComent.querySelector('.user-name').textContent = Dataroot.userName
+                        NewComent.querySelector('.comment-date').textContent = `${Dataroot.date} | ${Dataroot.time} | ${Dataroot.UTC}`
+                        NewComent.querySelector('.comment-content').innerHTML = Dataroot.contentEn
+
+                        document.getElementById('ProjectRoot').appendChild(NewComent);
+                    }
+
+                    for (let i = 1; i <= data.commends.totalNl; i++) {
+                        var Comment = document.getElementById('Commend-NL').content
+                        var NewComent = document.importNode(Comment, true)
+
+                        let templateKey = `template${i}`; // Dynamically build the key (e.g., template1, template2)
+                        console.log(templateKey)
+                        let Dataroot = data.commends[templateKey];
+                        console.log(Dataroot)
+
+                        NewComent.querySelector('.User-Pic').src = Dataroot.userThumb
+                        NewComent.querySelector('.user-name').textContent = Dataroot.userName
+                        NewComent.querySelector('.comment-date').textContent = `${Dataroot.date} | ${Dataroot.time} | ${Dataroot.UTC}`
+                        NewComent.querySelector('.comment-content').innerHTML = Dataroot.contentEn
+
+                        document.getElementById('ProjectRoot').appendChild(NewComent);
+                    }
 
                 }
 
