@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         document.getElementById('download-Button').display = "none"
                     }
 
-                    document.getElementById('popup-downloads-content').innerHTML = data.files
+                    document.getElementById('popup-downloads-content-EN').innerHTML = data.files-EN
 
                     if (data.webpage) {
                         document.getElementById('links-Button').display = "flex"
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         document.getElementById('links-Button').display = "none"
                     }
 
-                    document.getElementById('popup-links-content').innerHTML = data.links
+                    document.getElementById('popup-links-content').innerHTML = data.links-EN
 
                     document.getElementById('Thumb-En').src = data.thumbEn
                     document.getElementById('Thumb-Nl').src = data.ThumbNl
