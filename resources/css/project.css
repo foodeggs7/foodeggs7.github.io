@@ -30,6 +30,10 @@
   height: auto;
 }
 
+
+
+
+
 .project-content-styles h1,
 .project-content-styles h2,
 .project-content-styles h3,
@@ -38,6 +42,37 @@
 .project-content-styles h6{
   color: var(--Sec2);
 }
+
+.project-content-styles table {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+
+.project-content h1,
+.project-content h2,
+.project-content h3,
+.project-content h4,
+.project-content h5,
+.project-content h6{
+  color: var(--Sec2);
+}
+
+.comment-content img {
+  width: 100%;
+  height: auto;
+}
+
+.project-content table {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+
 
 .ProjectTitle {
     font-size: 20px;
