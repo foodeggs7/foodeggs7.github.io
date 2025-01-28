@@ -51,12 +51,12 @@
 }
 
 
-.project-content h1,
-.project-content h2,
-.project-content h3,
-.project-content h4,
-.project-content h5,
-.project-content h6{
+.comment-content h1,
+.comment-content h2,
+.comment-content h3,
+.comment-content h4,
+.comment-content h5,
+.comment-content h6{
   color: var(--Sec2);
 }
 
@@ -65,11 +65,11 @@
   height: auto;
 }
 
-.project-content table {
+.comment-content table {
   width: 100%;
   height: auto;
-  overflow: hidden;
-  overflow-x: scroll;
+  overflow-y: auto;
+    overflow-x: hidden;
 }
 
 
