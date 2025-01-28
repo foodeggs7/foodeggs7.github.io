@@ -30,20 +30,20 @@
         "totalEn": 2,
         "template1": {
             "userThumb": "",
-            "userName": "",
+            "userName": "username test",
             "date": "01-04-2025",
             "time": "01:30",
             "UTC": -2,
-            "contentEn": "",
+            "contentEn": "<h2>header</h2><p>lorem ipsum dolar sit ahmet</p>",
             "contentNl": ""
         },
         "template2": {
             "userThumb": "",
-            "userName": "",
+            "userName": "yo",
             "date": "01-04-2025",
             "time": "01:30",
             "UTC": -2,
-            "contentEn": "",
+            "contentEn": "<h2>header</h2><p>this some paragraph just test</p>",
             "contentNl": ""
         }
     }
