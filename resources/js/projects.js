@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         NewComent.querySelector('.User-Pic').src = Dataroot.userThumb
                         NewComent.querySelector('.user-name').textContent = Dataroot.userName
                         NewComent.querySelector('.comment-date').textContent = `${Dataroot.date} | ${Dataroot.time} | ${Dataroot.UTC}`
-                        NewComent.querySelector('.comment-content').innerHTML = Dataroot.contentEn
+                        NewComent.querySelector('.comment-content').innerHTML = Dataroot.contentNl
 
                         document.getElementById('ProjectRoot').appendChild(NewComent);
                     }
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 setTimeout(() => {
                     load()
-                }, 3000)
+                }, 2000)
 
 
             }

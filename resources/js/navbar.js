@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     const dateLabelnl = document.getElementById('Date-nl')
                     const d = new Date();
 
-                    const langToNL = document.getElementById('langToNl')
-                    const langToENG = document.getElementById('langToEng')
+                    //const langToNL = document.getElementById('langToNl')
+                    //const langToENG = document.getElementById('langToEng')
 
                     document.addEventListener('scroll', function () {
 
