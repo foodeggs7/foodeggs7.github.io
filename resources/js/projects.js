@@ -59,31 +59,22 @@ document.addEventListener('DOMContentLoaded', function () {
                     document.getElementById('Start-Data-post-NL').textContent = `geplaats: ${data.PostDate} | ${data.PostTime} | UTC ${data.UTC}`
                     document.getElementById('Update-Data-post-NL').textContent = `post bijgewerkt: ${data.postUpdDate} | ${data.postUpdTime} | UTC ${data.UTC}`
 
-                    for (let i = 1; i <= data.commends.totalEn; i++) {
-                        var Comment = document.getElementById('Commend-EN').content
-                        var NewComent = document.importNode(Comment, true)
+                    //for (let i = 1; i <= data.commends.totalEn; i++) {
+                        
+                   // }
 
-                        let templateKey = `template${i}`; // Dynamically build the key (e.g., template1, template2)
+                    for (let i = 1; i <= data.commends.TotalCommends; i++) {
+                        let templateKey = `Commend${i}`; // Dynamically build the key (e.g., template1, template2)
                         console.log(templateKey)
                         let Dataroot = data.commends[templateKey];
                         console.log(Dataroot)
-
-                        NewComent.querySelector('.User-Pic').src = Dataroot.userThumb
-                        NewComent.querySelector('.user-name').textContent = Dataroot.userName
-                        NewComent.querySelector('.comment-date').textContent = `${Dataroot.date} | ${Dataroot.time} | ${Dataroot.UTC}`
-                        NewComent.querySelector('.comment-content').innerHTML = Dataroot.contentEn
-
-                        document.getElementById('ProjectRoot').appendChild(NewComent);
-                    }
-
-                    for (let i = 1; i <= data.commends.totalNl; i++) {
+                        
+                        if (Dataroot.NL){
                         var Comment = document.getElementById('Commend-NL').content
                         var NewComent = document.importNode(Comment, true)
 
-                        let templateKey = `template${i}`; // Dynamically build the key (e.g., template1, template2)
-                        console.log(templateKey)
-                        let Dataroot = data.commends[templateKey];
-                        console.log(Dataroot)
+                        
+                        
 
                         NewComent.querySelector('.User-Pic').src = Dataroot.userThumb
                         NewComent.querySelector('.user-name').textContent = Dataroot.userName
@@ -91,6 +82,20 @@ document.addEventListener('DOMContentLoaded', function () {
                         NewComent.querySelector('.comment-content').innerHTML = Dataroot.contentNl
 
                         document.getElementById('ProjectRoot').appendChild(NewComent);
+                        }
+
+                        if (Dataroot.ENG){
+                            var Comment = document.getElementById('Commend-EN').content
+                            var NewComent = document.importNode(Comment, true)
+    
+                            NewComent.querySelector('.User-Pic').src = Dataroot.userThumb
+                            NewComent.querySelector('.user-name').textContent = Dataroot.userName
+                            NewComent.querySelector('.comment-date').textContent = `${Dataroot.date} | ${Dataroot.time} | ${Dataroot.UTC}`
+                            NewComent.querySelector('.comment-content').innerHTML = Dataroot.contentEn
+    
+                            document.getElementById('ProjectRoot').appendChild(NewComent);
+                        }
+                      
                     }
 
                 }
