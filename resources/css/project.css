@@ -43,12 +43,7 @@
   color: var(--Sec2);
 }
 
-.project-content-styles table {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  overflow-x: scroll;
-}
+
 
 
 .comment-content h1,

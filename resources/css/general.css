@@ -26,6 +26,11 @@ body {
     display: initial;
 }
 
+.Scroll-X {
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
 .hero {
 
     height: calc(100vh - 70px);
