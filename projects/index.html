@@ -17,7 +17,7 @@
     <div id="header">
         <!-- this will be a sort of padding so page content not disapear behind the dymaticalty loaded header-->
     </div>
-    <section class="projects">
+    <section class="projects" id="projects-parent">
         <article>
             <a href="https://foodeggs7.github.io/projects/project/?id=1" class="projects-card">
                 <div class="projects-main">
@@ -60,6 +60,51 @@
 
 
         </article>
+        
+        <template id="projects-card-link">
+           <article>
+            <a href="https://foodeggs7.github.io/projects/project/?id=1" class="projects-card">
+                <div class="projects-main">
+                    <div class="projects-OnHover"></div>
+                    <div class="projects-container">
+                        <div class="projects-top">
+                            <div class="projects-left">
+                                <h2 class="projects-title projects-title-NL lang lang-nl">dit is een heele langen title</h2>
+                                <h2 class="projects-title projects-title-EN lang lang-en">this a title what just can become very long lol</h2>
+                            </div>
+                        
+                            <div class="projects-right">
+                                <p class="projects-date-NL lang lang-nl">post updated 01-06-2023 | 01:56 | +1 UTC</p>
+                                <p class="projects-date-EN lang lang-en">post updated 01-06-2023 | 01:56 | +1 UTC</p>
+                                <br>
+                                <i class="ri-message-3-line"></i>
+                                <p class="projects-commends-NL lang lang-nl">345</p>
+                                <p class="projects-commends-EN lang lang-en">200</p>
+                            </div>
+                        </div>
+                        
+                        <div class="projects-bottom">
+                            <div class="projects-desc projects-desc-NL lang lang-nl">
+                                <p>dit worrdt de besvhrijving</p>
+                            </div>
+                            <div class="projects-desc projects-desc-EN lang lang-en">
+                                <p>this will be the desription</p>
+                            </div>
+                            <div class="projects-thumb projects-thumb-NL lang lang-nl">
+                                <img src="" alt="dit is de project thumbnail">
+                            </div>
+                            <div class="projects-thumb projects-thumb-EN lang lang-en">
+                                <img src="" alt="this is the projects thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </a>
+
+
+        </article>
+        </template>
 
     </section>
 

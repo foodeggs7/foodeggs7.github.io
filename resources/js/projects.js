@@ -50,14 +50,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
                     document.getElementById('Start-Data-date-EN').textContent = `Project started: ${data.Date} | ${data.Time} | UTC ${data.UTC}`
-                    document.getElementById('Update-Data-date-EN').textContent = `Project Updated: ${data.UpdDate} | ${data.UpdTime} | UTC ${data.UTC}`
-                    document.getElementById('Start-Data-post-EN').textContent = `Posted: ${data.PostDate} | ${data.PostTime} | UTC ${data.UTC}`
-                    document.getElementById('Update-Data-post-EN').textContent = `post Updated: ${data.postUpdDate} | ${data.postUpdTime} | UTC ${data.UTC}`
+                    document.getElementById('Update-Data-date-EN').textContent = `Project Updated: ${data.UpdDate} | ${data.UpdTime} | UTC ${data.UpdUTC}`
+                    document.getElementById('Start-Data-post-EN').textContent = `Posted: ${data.PostDate} | ${data.PostTime} | UTC ${data.PostUTC}`
+                    document.getElementById('Update-Data-post-EN').textContent = `post Updated: ${data.postUpdDate} | ${data.postUpdTime} | UTC ${data.PostUpdUTC}`
 
                     document.getElementById('Start-Data-date-NL').textContent = `Project gestart: ${data.Date} | ${data.Time} | UTC ${data.UTC}`
-                    document.getElementById('Update-Data-date-NL').textContent = `Project bijgewerkt: ${data.UpdDate} | ${data.UpdTime} | UTC ${data.UTC}`
-                    document.getElementById('Start-Data-post-NL').textContent = `geplaats: ${data.PostDate} | ${data.PostTime} | UTC ${data.UTC}`
-                    document.getElementById('Update-Data-post-NL').textContent = `post bijgewerkt: ${data.postUpdDate} | ${data.postUpdTime} | UTC ${data.UTC}`
+                    document.getElementById('Update-Data-date-NL').textContent = `Project bijgewerkt: ${data.UpdDate} | ${data.UpdTime} | UTC ${data.UpdUTC}`
+                    document.getElementById('Start-Data-post-NL').textContent = `geplaats: ${data.PostDate} | ${data.PostTime} | UTC ${data.PostUTC}`
+                    document.getElementById('Update-Data-post-NL').textContent = `post bijgewerkt: ${data.postUpdDate} | ${data.postUpdTime} | UTC ${data.PostUpdUTC}`
 
                     //for (let i = 1; i <= data.commends.totalEn; i++) {
                         
