@@ -172,11 +172,12 @@ body {
     padding-top: 10px;
 }
 .projects-main {
-    border: 2px solid var(--BorderColor);
+    border: 1px solid var(--BorderColor);
     border-radius: var(--CornerRadius);
     display: flex;
     flex-direction: row;
     overflow: hidden;
+    box-shadow: var(--shadow);
 }
 
 .projects-card {
