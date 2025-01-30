@@ -96,12 +96,11 @@ body {
 
 .popup-content {
     width: 100%;
-    height: auto;
-    max-height: inherit; /* Make sure it respects the parent's height */
+    max-height: 300px;
     display: flex
 ;
     flex-direction: column;
-    justify-content: flex-start;
+    /*justify-content: flex-start;*/
     align-items: center;
    
     scrollbar-width: none;
