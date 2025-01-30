@@ -1,13 +1,16 @@
 {
     "Date": "02-08-2022",
     "Time": "17:35",
+    "UTC": 1,
     "UpdDate": "17-09-2022",
     "UpdTime": "19:06",
+    "UpdUTC": 1,
     "PostDate": "24-01-2025",
     "PostTime": "16:50",
+    "PostUTC": 1,
     "postUpdDate": "29-01-2025",
     "postUpdTime": "16:35",
-    "UTC": 1,
+    "PostUpdUTC": 1,
 
     "openSource": false,
     "filesEN": "<a href=\"../../resources/downloads/lol.css\" download=\"lol.css\"> link 1</a><a href=\"../../resources/downloads/lol.css\" download=\"lol.css\"> link 2</a>",

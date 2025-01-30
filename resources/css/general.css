@@ -1,4 +1,7 @@
 :root {
+    --cta: #06c46f;
+    --BG1: #ffffff;
+    --BG2: whitesmoke;
     --Sec2: #055a4a;
     --Sec: #06c46f;
     --secBG: #e6f7f0;
@@ -45,7 +48,7 @@ body {
 
 .link {
     text-decoration: none;
-    border-bottom: 1px solid var(--Sec);
+    border-bottom: 1px solid var(--cta);
     color: var(--Sec);
 }
 
@@ -75,7 +78,7 @@ body {
 }
 
 .popup-topbar {
-    background-color: var(--Sec2);
+    background-color: var(--cta);
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -83,7 +86,7 @@ body {
 }
 
 .popup-topbar h3{
-    color: var(--TextColor2);
+    color: var(--TextColor1);
 }
 
 .popup-close {
@@ -93,6 +96,8 @@ body {
     top: calc(50% - 150px - 15px);
     color: red;
 }
+
+
 
 .popup-content {
     width: 100%;

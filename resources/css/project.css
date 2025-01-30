@@ -1,9 +1,13 @@
 :root {
+    --BorderColor: #d1d1d1;
+    --cta: #06c46f;
+    --Card: #ffffff;
     --Sec2: #055a4a;
     --Sec: #06c46f;
     --CornerRadius: 10px;
     --TextColor1: #333333;
     --TextColor2: #ffffff;
+    --shadow: 0 2px 2px rgba(0,0,0,0.1)
 }
 
 .project-main {
@@ -13,13 +17,15 @@
 }
 
 .project-content {
-    border: 2px solid var(--Sec2);
+    border: 1px solid var(--BorderColor);
     border-radius: var(--CornerRadius);
     overflow: hidden;
+    background-color: var(--Card);
+    box-shadow: var(--shadow)
 }
 
 .project-Title {
-  background-color: var(--Sec2);
+  background-color: var(--cta);
   height: 50px;
   display: flex;
   flex-direction: row;
@@ -40,7 +46,7 @@
 .project-content-styles h4,
 .project-content-styles h5,
 .project-content-styles h6{
-  color: var(--Sec2);
+  color: var(--cta);
 }
 
 
@@ -52,7 +58,7 @@
 .comment-content h4,
 .comment-content h5,
 .comment-content h6{
-  color: var(--Sec2);
+  color: var(--cta);
 }
 
 .comment-content img {
@@ -71,7 +77,7 @@
 
 .ProjectTitle {
     font-size: 20px;
-    color: var(--TextColor2);
+    color: var(--TextColor1);
 }
 
 
@@ -80,7 +86,7 @@
     font-size: 50px;
     width: 50px;
     height: 50px;
-    color: var(--TextColor2);
+    color: var(--TextColor1);
 }
 
 .project-actions {
@@ -92,7 +98,7 @@
 }
 
 #project-info hr {
-    border-color: var(--Sec2);
+    border-color: var(--BorderColor);
     border-style: solid;
 }
 
@@ -100,7 +106,7 @@
     font-size: 50px;
     width: 50px;
     height: 50px;
-    color: var(--TextColor2);
+    color: var(--TextColor1);
 }
 
 .project-Date {
@@ -125,9 +131,10 @@
 
 
 .comment-main {
-    border: 2px solid var(--Sec2);
+    border: 1px solid var(--BorderColor);
     border-radius: var(--CornerRadius);
     overflow: hidden; 
+    box-shadow: var(--shadow);
 }
 
 .comment {
@@ -153,6 +160,73 @@
     justify-content: right;
     width: 40%;
 }
+
+/*home page for projects*/
+.projects {
+ padding: 10%;
+    padding-top: 10px;
+}
+.projects-main {
+    border: 2px solid var(--BorderColor);
+    border-radius: var(--CornerRadius);
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.projects-card {
+    text-decoration: none;
+    color: var(--TextColor1);
+
+}
+.projects-OnHover {
+   
+    width: 10px;
+    background-color: transparent;
+}
+
+.projects-card:hover .projects-OnHover {
+    background-color: var(--cta);
+}
+
+
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.projects-top {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between; /* Pushes left and right content apart */
+    align-items: center; /* Aligns items vertically */
+}
+
+.projects-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-right {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds spacing between right elements */
+}
+
+
+
+.projects-bottom {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between; /* Pushes left and right content apart */
+    align-items: center; /* Aligns items vertically */
+}
+
+
 
 @media (max-width: 950px) {
     .user-name {

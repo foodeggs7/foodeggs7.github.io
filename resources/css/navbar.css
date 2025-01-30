@@ -1,12 +1,12 @@
 :root {
-    --navbarBG: #055a4a;
-    --navbarButton: #ffffff;
+    --navbarBG: whitesmoke;
+    --navbarBG2: whitesmoke;
     --cta: #06c46f;
     --CornerRadiusNavBarButtons: 10px;
     --CornerRadius: 10px;
     --TextColor1: #333333;
     --TextColor2: #ffffff;
-
+    --borderColor: #d1d1d1;
 }
 
 #NavBar {
@@ -75,7 +75,8 @@
 #Date,
 #Date-nl {
     text-decoration: none;
-    color: var(--TextColor2);
+    color: var(--cta);
+    font-weight: 600;
 }
 .navButton {
     text-decoration: none;
@@ -84,8 +85,8 @@
     font-size: 20px;
     text-align: center!important;
     border-radius: var(--CornerRadiusNavBarButtons);
-    color: var(--TextColor2);
- 
+    color: var(--TextColor1);
+    font-weight: 600;
     margin: 5px;
     padding: 10px 0; /* Adds vertical padding to create space around the text */
     position: relative;
@@ -116,10 +117,11 @@
     font-size: 35px;
     font-weight: 600;
     text-align: center;
-    color: var(--TextColor2);
+    color: var(--TextColor1);
     /*border-bottom: 2px solid var(--TextColor2);*/
     padding: 5px;
     margin: 15px;
+    
     
 }
 
@@ -128,13 +130,13 @@
     height: 50px;
     font-size: 50px;
     display: none;
-    color: var(--navbarButton);
+    color: var(--cta);
 }
 
 #HamburgerMenu {
  /*height: calc(100vh - 170px);*/
  position: fixed;
- background-color: var(--navbarBG);
+ background-color: var(--navbarBG2);
 width: auto;
  box-sizing: border-box; /* Ensure padding doesn't add to width */
  right: -30000px;
@@ -147,7 +149,7 @@ width: auto;
     align-items: center;
     align-content: center;
     padding: 0;
-
+    border: 1px solid var(--borderColor);
 }
 
 #HamburgerMenu ul {
