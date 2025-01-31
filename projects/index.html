@@ -18,48 +18,10 @@
         <!-- this will be a sort of padding so page content not disapear behind the dymaticalty loaded header-->
     </div>
     <section class="projects" id="projects-parent">
-        <article>
-            <a href="https://foodeggs7.github.io/projects/project/?id=1" class="projects-card">
-                <div class="projects-main">
-                    <div class="projects-OnHover"></div>
-                    <div class="projects-container">
-                        <div class="projects-top">
-                            <div class="projects-left">
-                                <h2 class="projects-title projects-title-NL lang lang-nl">dit is een heele langen title</h2>
-                                <h2 class="projects-title projects-title-EN lang lang-en">this a title what just can become very long lol</h2>
-                            </div>
-                        
-                            <div class="projects-right">
-                                <p class="projects-date-NL lang lang-nl">post updated 01-06-2023 | 01:56 | +1 UTC</p>
-                                <p class="projects-date-EN lang lang-en">post updated 01-06-2023 | 01:56 | +1 UTC</p>
-                                <br>
-                                <i class="ri-message-3-line"></i>
-                                <p class="projects-commends-NL lang lang-nl">345</p>
-                                <p class="projects-commends-EN lang lang-en">200</p>
-                            </div>
-                        </div>
-                        
-                        <div class="projects-bottom">
-                            <div class="projects-desc projects-desc-NL lang lang-nl">
-                                <p>dit worrdt de besvhrijving</p>
-                            </div>
-                            <div class="projects-desc projects-desc-EN lang lang-en">
-                                <p>this will be the desription</p>
-                            </div>
-                            <div class="projects-thumb projects-thumb-NL lang lang-nl">
-                                <img src="" alt="dit is de project thumbnail">
-                            </div>
-                            <div class="projects-thumb projects-thumb-EN lang lang-en">
-                                <img src="" alt="this is the projects thumbnail">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </a>
+        
 
 
-        </article>
+       
         
         <template id="projects-card-link">
            <article>
@@ -67,10 +29,10 @@
                 <div class="projects-main">
                     <div class="projects-OnHover"></div>
                     <div class="projects-container">
-                        <div class="projects-top">
+                        <div class="projects-top"> 
                             <div class="projects-left">
-                                <h2 class="projects-title projects-title-NL lang lang-nl">dit is een heele langen title</h2>
-                                <h2 class="projects-title projects-title-EN lang lang-en">this a title what just can become very long lol</h2>
+                                <h2 class="projects-title-NL projects-title  lang lang-nl" id="">dit is een heele langen title</h2>
+                                <h2 class="projects-title-EN projects-title  lang lang-en">this a title what just can become very long lol</h2>
                             </div>
                         
                             <div class="projects-right">
@@ -111,14 +73,52 @@
 
 
     <section id="Loading">
-        <div class="LoadingIndicator"><span class="js-1">console</span>.<span class="js-2">log</span>(<span
-                class="js-string">"hello, world"</span>)</div>
+        <div class="psudo-topbar">
+            <div class="navbar-left">
+                <ul>
+                     <li>
+                         <a class="home-Logo-Button" href="https://foodeggs7.github.io"><img src="https://foodeggs7.github.io/resources/img/foodeggs7.png" alt="website logo klik hier om naar de home pagina te gaan"></a>
+                         <a lang="en" id ="Date"> booting...</a>
+                     </li>
+                 </ul> 
+             </div>
+             <div class="navbar-right">
+                <div id="P-langSelector">
+
+                </div>
+                
+                
+                 
+                 <ul class="Desktop-NavButtons">
+                      <li>
+                        <div class="P-Desktop-NavButtonsr">
+
+                        </div>
+                      </li>
+                      <li>
+                        <div class="P-Desktop-NavButtonsr">
+
+                        </div>
+                      </li>
+                      
+                  </ul> 
+                  <i class="hamburger ri-menu-line" id="Hamburger-Toggle"></i>
+              </div>
+        </div>
+        <div class="LoadingIndicator"><span>fetching data...</span></span></div>
+        <p id="LoadingTextForPage" style="display: none;">load all projects</p>
+
+        <div id="loadBar">
+            <div id="InnerLoadBar">
+
+            </div>
+        </div>
     </section>
 
-    <script src="../resources/js/KillLoadingScreen.js"></script>
+    <script src="../resources/js/loading.js"></script>
 
     <script src="../resources/js/navbar.js"></script>
-    <script src="../resources/js/projects.js"></script>
+    <script src="../resources/js/projects-all.js"></script>
 </body>
 
 </html>

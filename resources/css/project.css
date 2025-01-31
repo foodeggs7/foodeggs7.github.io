@@ -36,6 +36,10 @@ body {
   flex-direction: row;
 }
 
+.GoBackToAllProjects {
+    text-decoration: none;
+}
+
 .project-content-styles img {
   width: 100%;
   height: auto;
@@ -230,6 +234,14 @@ body {
     width: 100%;
     justify-content: space-between; /* Pushes left and right content apart */
     align-items: center; /* Aligns items vertically */
+}
+
+.projects-right i {
+    color: var(--cta);
+}
+
+.projects-title {
+    color: var(--cta);
 }
 
 

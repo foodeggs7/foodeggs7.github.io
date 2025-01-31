@@ -101,14 +101,14 @@ body {
 
 .popup-content {
     width: 100%;
-    max-height: 300px;
-    display: flex
-;
+    max-height:300px;
+    display: flex;
     flex-direction: column;
     /*justify-content: flex-start;*/
     align-items: center;
    
     scrollbar-width: none;
+    padding-bottom: 50px;
 }
 
 .popup-content a {
@@ -130,6 +130,7 @@ body {
 
 #Loading {
     display: flex;
+    flex-direction: column;
     position: fixed;
     z-index: 999999999;
     background-color: black;
@@ -137,6 +138,25 @@ body {
     height: 100%;
     top: 0;
     left: 0;
+}
+
+#loadBar {
+    display: none;
+    width: 500px;
+    height: 50px;
+    position: fixed;
+    left: calc(50% - 250px);
+    top: calc(50% - 25px + 70px);
+    background-color: var(--Sec2);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+#InnerLoadBar {
+    width: 1%;
+    height: 100%;
+    display: flex;
+    background-color: var(--cta);
 }
 
 .js-1 {
@@ -168,6 +188,10 @@ body {
      
     }
 
+    .popup-content {
+        padding-bottom: 200px;
+    }
+
     .popup-close {
         font-size: 25px;
         position: fixed;
@@ -177,7 +201,19 @@ body {
     }
 
     .popup-topbar h3{
-        color: var(--TextColor2);
+       
         font-size: 15px;
+    }
+
+    #loadBar {
+        display: none;
+        width: 250px;
+        height: 50px;
+        position: fixed;
+        left: calc(50% - 125px);
+        top: calc(50% - 25px + 70px);
+        background-color: var(--Sec2);
+        border-radius: 50px;
+        overflow: hidden;
     }
 }

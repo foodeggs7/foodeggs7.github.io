@@ -160,6 +160,44 @@ width: auto;
     align-items: center;
 }
 
+/*psudo*/
+@keyframes loadinggradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes pulseGradient {
+    0% { background: linear-gradient(90deg, #d1d1d1, #cac1c1); }
+    50% { background: linear-gradient(90deg, rgb(190, 190, 190), #9c9595); }
+    100% { background: linear-gradient(90deg, #d1d1d1, #cac1c1); }
+}
+
+.psudo-topbar {
+    background-color: var(--navbarBG);
+    width: 100%;
+    display: flex;
+    height: 70px;
+    justify-content: right;
+    box-shadow: 1px 1px 9px 1px gray;
+    position: relative;
+    z-index: 2000;
+}
+
+#P-langSelector {
+    border-radius: var(--CornerRadiusNavBarButtons);
+    animation: pulseGradient 5s infinite ease-in-out;
+    width: 66px;
+    height: 17px;
+}
+
+.P-Desktop-NavButtonsr {
+    border-radius: var(--CornerRadiusNavBarButtons);
+    animation: pulseGradient 5s infinite ease-in-out;
+    width: 100px;
+    height: 23px;
+}
+
 
 
 @media (max-width: 800px) {
