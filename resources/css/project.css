@@ -36,6 +36,11 @@ body {
   flex-direction: row;
 }
 
+.project-thumbnail img {
+  width: 90%;
+  height: auto;
+}
+
 .GoBackToAllProjects {
     text-decoration: none;
 }
@@ -182,11 +187,13 @@ body {
     flex-direction: row;
     overflow: hidden;
     box-shadow: var(--shadow);
+    max-height: 200px;
 }
 
 .projects-card {
     text-decoration: none;
     color: var(--TextColor1);
+    
 
 }
 .projects-OnHover {
@@ -234,6 +241,23 @@ body {
     width: 100%;
     justify-content: space-between; /* Pushes left and right content apart */
     align-items: center; /* Aligns items vertically */
+}
+
+.projects-thumb {
+  display: flex;
+  width: 40%;
+  height: 100%;
+}
+
+.projects-thumb img {
+  width: 90%;
+  height: 90%;
+  margin: 10px;
+}
+
+projects-desc {
+  display: flex;
+  width: 60%;
 }
 
 .projects-right i {
