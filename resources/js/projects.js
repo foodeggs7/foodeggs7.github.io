@@ -9,7 +9,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var IdNum = Number(id)
     console.log(IdNum); // Converts "id" to a number and logs it
 
-    fetch(`https://foodeggs7.github.io/resources/api/projects/project${id}.json`)
+    const root = "https://foodeggs7.github.io/"
+
+    fetch(`${root}resources/api/projects/project${id}.json`)
         .then(response => response.json())
         .then(data => {
 
@@ -38,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         document.getElementById('links-Button').style.display = "none"
                     }
 
+                    
                     document.getElementById('popup-links-content-EN').innerHTML = data.linksEN
                     document.getElementById('popup-links-content-NL').innerHTML = data.linksNL
 
@@ -63,10 +66,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     // }
 
-                    fetch(data.descriptionNl)
+                    fetch(`${root}${data.descriptionNl}`)
                         .then(response => response.text())
                         .then(data => {
                             document.getElementById('Project-Info-Nl').innerHTML = data
+                        })
+
+                        fetch(`${root}${data.descriptionEn}`)
+                        .then(response => response.text())
+                        .then(data => {
+                            document.getElementById('Project-Info-En').innerHTML = data
                         })
 
                     for (let i = 1; i <= data.commends.TotalCommends; i++) {
