@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- dit is de comment-->
+
+<head>
+    <meta charset="utf-8">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="../resources/css/navbar.css">
+    <link rel="stylesheet" href="../resources/css/general.css">
+    <link rel="stylesheet" href="../resources/css/portfolio-roblox.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+    <div id="header">
+        <!-- this will be a sort of padding so page content not disapear behind the dymaticalty loaded header-->
+    </div>
+    <section class="portfolio-roblox">
+        <div class="portfolio-r-nav">
+            <ul>
+                <li>
+                    <a href="">intro</a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="portfolio-r-intro portfolio-r-card">
+            <div class="portfolio-r-card-top">
+                <div class="health">
+                    <p class="top-txt">Health: </p>
+                    <div class="health-meter">
+                        <div class="health-meter-inner" style="width: 50%;">
+
+                        </div>
+                    </div>
+                    <p class="top-txt">50%</p>
+                </div>
+                <p class="portfolio-r-card-title">
+                    intro
+
+                </p>
+                <div class="portfolio-r-card-controls">
+                    <button class="portfolio-r-card-controls-min">
+                        <i class="ri-subtract-line"></i>
+                    </button>
+
+                    <button class="portfolio-r-card-controls-close">
+                        <i class="ri-close-line"></i>
+                    </button>
+
+                </div>
+            </div>
+            <div class="portfolio-r-card-content">
+                <h2>foodeggs7</h2>
+                <h6>owner of unviere</h6>
+                <p>hi there im foodeggs7 im an programmer, builder, ui desinger, animator back in 2023 i was already a year on roblox we did a game jam and there my dream game paralleleized engineers was born thats way i make my portfolio in scifi style</p>
+            </div>
+            
+        </div>
+
+        <div class="portfolio-r-work portfolio-r-card">
+            <div class="portfolio-r-card-top">
+                <div class="health">
+                    <p class="top-txt">oxygen: </p>
+                    <div class="health-meter">
+                        <div class="health-meter-inner" style="width: 90%;">
+
+                        </div>
+                    </div>
+                    <p class="top-txt">90%</p>
+                </div>
+                <p class="portfolio-r-card-title">
+                    work history
+
+                </p>
+                <div class="portfolio-r-card-controls">
+                    <button class="portfolio-r-card-controls-min">
+                        <i class="ri-subtract-line"></i>
+                    </button>
+
+                    <button class="portfolio-r-card-controls-close">
+                        <i class="ri-close-line"></i>
+                    </button>
+                    
+                </div>
+            </div>
+            <div class="portfolio-r-card-content">
+                <h2>happy obbies</h2>
+                <h6>2022-2023</h6>
+                <p>happy obbies is the game i started with</p>
+            </div>
+            
+        </div>
+    </section>
+<template>
+    <section class="popup" id="popup">
+        <div id="popup-links" class="popupFrame">
+            <div class="popup-topbar">
+                <h3 class="lang lang-en">links including with this project</h3>
+                <h3 class="lang lang-nl">linkjes die bij dit project horen</h3>
+                <i class="ri-close-circle-fill popup-close"></i>
+            </div>
+            <div id="popup-links-content"class="popup-content Scroll-Y" >
+              
+               <!-- <div class="lang lang-en">
+                    <div id="popup-links-content-EN" class="popup-content Scroll-Y">
+
+                    </div>
+                </div>
+
+                <div i class="lang lang-nl">
+                    <div id="popup-links-content-NL" class="popup-content Scroll-Y">
+
+                    </div>
+                </div>-->
+            </div>
+        </div>
+
+        <div id="popup-downloads" class="popupFrame">
+            <div class="popup-topbar">
+                <h3 class="lang lang-en">download files from this project</h3>
+                <h3 class="lang lang-nl">download de bestanden die bij dit project horen</h3>
+                <i class="ri-close-circle-fill popup-close"></i>
+            </div>
+            <div id="popup-downloads-content" class="popup-content Scroll-Y">
+               <!-- <div class="lang lang-en">
+                    <div id="popup-downloads-content-EN" class="popup-content Scroll-Y">
+
+                    </div>
+                </div>
+
+                <div i class="lang lang-nl">
+                    <div id="popup-downloads-content-NL" class="popup-content Scroll-Y">
+
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </section>
+
+    <section id="Loading">
+        <div class="psudo-topbar">
+            <div class="navbar-left">
+                <ul>
+                     <li>
+                         <a class="home-Logo-Button" href="https://foodeggs7.github.io"><img src="https://foodeggs7.github.io/resources/img/foodeggs7.png" alt="website logo klik hier om naar de home pagina te gaan"></a>
+                         <a lang="en" id ="Date"> booting...</a>
+                     </li>
+                 </ul> 
+             </div>
+             <div class="navbar-right">
+                <div id="P-langSelector">
+
+                </div>
+                
+                
+                 
+                 <ul class="Desktop-NavButtons">
+                      <li>
+                        <div class="P-Desktop-NavButtonsr">
+
+                        </div>
+                      </li>
+                      <li>
+                        <div class="P-Desktop-NavButtonsr">
+
+                        </div>
+                      </li>
+                      
+                  </ul> 
+                  <i class="hamburger ri-menu-line" id="Hamburger-Toggle"></i>
+              </div>
+        </div>
+        <div class="LoadingIndicator"><span>fetching data...</span></span></div>
+        <p id="LoadingTextForPage" style="display: none;">load project</p>
+
+        <div id="loadBar">
+            <div id="InnerLoadBar">
+
+            </div>
+        </div>
+    </section>
+</template>
+    <!-- <script src="../../resources/js/loading.js"></script> -->
+
+    <script src="../resources/js/navbar.js"></script>
+    <script src="../resources/js/projects.js"></script>
+    <script src="../resources/js/popup-close.js"></script>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const linkButton = document.getElementById('links-Button')
+            const linkPopup = document.getElementById('popup-links')
+
+            const dlButton = document.getElementById('download-Button')
+            const dlPopup = document.getElementById('popup-downloads')
+
+            const popup = document.getElementById('popup')
+
+            linkButton.addEventListener('click', () => {
+                linkPopup.style.display = "flex"
+                popup.style.display = "flex"
+            })
+
+            dlButton.addEventListener('click', () => {
+                dlPopup.style.display = "flex"
+                popup.style.display = "flex"
+            })
+        })
+
+    </script>
+</body>
+
+</html>

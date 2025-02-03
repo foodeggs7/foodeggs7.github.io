@@ -1,0 +1,242 @@
+:root {
+    --scifi-back: #0D0D0D;
+    --scifi-bleu: #00FFFF;
+    --scifi-blue-shadow: 0 0 20px #00FFFF, 0 0 40px #00FFFF, 0 0 60px #00FFFF;
+    --scifi-blue-shadow-mob: 0 0 5px #00FFFF, 0 0 15px #00FFFF, 0 0 20px #00FFFF;
+    --scifi-sec-blue: #004466;
+    --scifi-bleu-sec-glow: #0A1F44;
+    --scifi-sec-txt: whitesmoke;
+    --scifi-orange: #FF4500;
+    --scifi-red-glow: #FF073A;
+    --scifi-green: #00FF7F;
+    --scifi-green-shadow: 0 0 20px #00FF7F, 0 0 40px #00FF7F, 0 0 60px #00FF7F;
+
+    --button-corner: 10px;
+    --frame-corner: 10px;
+    --meter-corner: 50px;
+}
+
+.portfolio-roblox {
+    display: flex;
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    min-height: 300vh;
+height: auto;
+background-image: url("../img/portal2.png");
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.portfolio-r-nav {
+    position: absolute;
+    width: 10%;
+    height: 100vh;
+    display: none;
+    margin: 5px;
+    background-color: var(--scifi-back);
+    border: 2px solid var(--scifi-bleu);
+    opacity: 80%;
+    box-shadow: var(--scifi-blue-shadow);
+    border-radius: var(--frame-corner);
+}
+
+.portfolio-r-nav a {
+    display: flex;
+    text-decoration: none;
+    color: var(--scifi-bleu);
+    font-size: 25px;
+    min-width: 100%!important;
+    text-align: center;
+}
+
+.portfolio-r-nav ul {
+   list-style: none;
+   display: flex;
+   padding: 0px;
+}
+
+
+
+.portfolio-r-card {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    background-color: var(--scifi-back);
+    border: 2px solid var(--scifi-bleu);
+    opacity: 80%;  
+    box-shadow: var(--scifi-blue-shadow);
+}
+
+.portfolio-r-card h2,
+.portfolio-r-card h6,
+.portfolio-r-card p {
+    color: var(--scifi-bleu);
+
+}
+
+.portfolio-r-card-top {
+    background-color: var(--scifi-sec-blue);
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+.health-meter-inner {
+  height: 100%;
+  background-color: var(--scifi-bleu);
+}
+
+.health {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.health p {
+    color: var(--scifi-sec-txt);
+    
+}
+
+.health-meter {
+    width: 100px;
+    height: 20px;
+    background-color: var(--scifi-back);
+    border-radius: var(--meter-corner);
+    overflow: hidden;
+}
+
+.portfolio-r-card-title {
+    position: absolute;
+    top: 25px;
+    left: 40%;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.portfolio-r-card-controls {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}
+
+.portfolio-r-card-controls-close {
+    background-color: var(--scifi-orange);
+    border-color: var(--scifi-bleu);
+    border-style: solid;
+    border-radius: var(--button-corner);
+}
+
+.portfolio-r-card-controls-min {
+    background-color: var(--scifi-bleu-sec-glow);
+    border-color: var(--scifi-bleu);
+    border-style: solid;
+    border-radius: var(--button-corner);
+}
+
+.portfolio-r-card-controls-close:hover {
+    background-color: var(--scifi-red-glow);
+    border-color: var(--scifi-green);
+    box-shadow: var(--scifi-green-shadow);
+}
+
+.portfolio-r-card-controls-min:hover {
+    background-color: var(--scifi-sec-blue);
+    border-color: var(--scifi-green);
+    box-shadow: var(--scifi-green-shadow);
+
+}
+
+.portfolio-r-card-controls-close i {
+    color: var(--scifi-sec-txt);
+}
+
+.portfolio-r-card-controls-min i {
+    color: var(--scifi-sec-txt);
+}
+
+.portfolio-r-intro {
+    width: 300px;
+    height: 210px;
+    top: 150px;
+    right: 10%;
+}
+
+.portfolio-r-work {
+    width: 400px;
+    height: 300px;
+    top: 100px;
+    right: 50%;
+}
+
+@media (max-width: 950px) {
+    .portfolio-r-nav {
+        position: fixed;
+        display: flex;
+        top: 80px;
+        width: 30%;
+        height: calc(100vh - 90px);
+        display: flex;
+        margin: 5px;
+        background-color: var(--scifi-back);
+        border: 2px solid var(--scifi-bleu);
+        opacity: 80%;
+        box-shadow: var(--scifi-blue-shadow-mob);
+    } 
+
+    .portfolio-r-card {
+        position: absolute;
+        height: 210px;
+        display: flex;
+        flex-direction: column;
+        margin: 2px;
+        margin-bottom: 50px;
+       right: 10px; 
+       width: 200px;
+       box-shadow: var(--scifi-blue-shadow-mob);
+    }
+
+    .portfolio-r-card-top {
+        min-height: 30px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 2px;
+    }
+
+    .health p {
+        color: var(--scifi-sec-txt);
+        font-size: 10px;
+    }
+    
+    .health-meter {
+        width: 60px;
+        height: 10px;
+    }
+    
+    .portfolio-r-card-title {
+        position: absolute;
+        top: 12px;
+        left: 20%;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .portfolio-r-card-content {
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+
+    .portfolio-r-intro {
+        top: 100px;
+    }
+    
+    .portfolio-r-work {
+        top: 350px;
+        height: 600px;
+    }
+}
