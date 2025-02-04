@@ -24,40 +24,40 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (data.openSource) {
                         console.log('show')
                         document.getElementById('download-Button').style.display = "flex"
-                        
+
                         fetch(`${root}${data.files}`)
-                        .then(response => response.text())
-                        .then(data => {
-                            document.getElementById('popup-downloads-content').innerHTML = data
-                        })
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById('popup-downloads-content').innerHTML = data
+                            })
                     } else {
                         console.log('hide')
                         document.getElementById('download-Button').style.display = "none"
                     }
-                    
-                    
 
-                  //  document.getElementById('popup-downloads-content-EN').innerHTML = data.filesEN
-                  //  document.getElementById('popup-downloads-content-NL').innerHTML = data.filesNL
+
+
+                    //  document.getElementById('popup-downloads-content-EN').innerHTML = data.filesEN
+                    //  document.getElementById('popup-downloads-content-NL').innerHTML = data.filesNL
 
                     if (data.webpage) {
                         console.log('show')
                         document.getElementById('links-Button').style.display = "flex"
                         fetch(`${root}${data.links}`)
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('popup-links-content').innerHTML = data
-  })
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById('popup-links-content').innerHTML = data
+                            })
                     } else {
                         console.log('hide')
                         document.getElementById('links-Button').style.display = "none"
                     }
-                    
-                    
 
-                    
-                   // document.getElementById('popup-links-content-EN').innerHTML = data.linksEN
-                //  document.getElementById('popup-links-content-NL').innerHTML = data.linksNL
+
+
+
+                    // document.getElementById('popup-links-content-EN').innerHTML = data.linksEN
+                    //  document.getElementById('popup-links-content-NL').innerHTML = data.linksNL
 
 
                     document.getElementById('Thumb-En').src = data.thumbEn
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             document.getElementById('Project-Info-Nl').innerHTML = data
                         })
 
-                        fetch(`${root}${data.descriptionEn}`)
+                    fetch(`${root}${data.descriptionEn}`)
                         .then(response => response.text())
                         .then(data => {
                             document.getElementById('Project-Info-En').innerHTML = data
