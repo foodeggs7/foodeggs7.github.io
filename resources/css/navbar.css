@@ -248,6 +248,14 @@ width: auto;
     border-radius: var(--CornerRadius);
 }
 
+.projects-page-header-back-desktop{
+display: flex;
+}
+
+.projects-page-header-back-mobile{
+display: none;
+}
+
 @media (max-width: 1400px) {
     .date-labbel-scrolled {
         position: fixed;
@@ -301,4 +309,12 @@ width: auto;
         height: 20px;
         font-size: 14px;
     }
+
+    .projects-page-header-back-desktop{
+        display: none;
+        }
+        
+        .projects-page-header-back-mobile{
+        display: flex;
+        }
 }
