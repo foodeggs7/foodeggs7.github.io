@@ -200,7 +200,7 @@ width: auto;
     height: 23px;
 }
 
-.scrolled {
+#scrolled {
     display: none; /* none by defould*/
 }
 
@@ -250,8 +250,8 @@ width: auto;
 
 @media (max-width: 1400px) {
     .date-labbel-scrolled {
-        position: absolute;
-        left: -30000000;
+        position: fixed;
+        left: -30000000px;
 
     }
 }

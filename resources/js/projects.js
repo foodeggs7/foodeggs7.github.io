@@ -130,14 +130,53 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 }
 
+
                 setTimeout(() => {
                     load()
+
                 }, 2000)
 
 
             }
 
         })
+
+
+    document.addEventListener('scroll', function () {
+        const scrolled = document.getElementById('scrolled')
+        const header = document.getElementById('projects-page-header')
+
+        if (window.scrollY > 70) {
+            Array.from(document.getElementsByClassName('date-label')).forEach(function (elem) {
+
+                elem.classList.add('date-labbel-scrolled');
+
+
+
+            });
+            scrolled.style.display = "flex"
+            header.style.display = "flex"
+        }
+        else {
+            Array.from(document.getElementsByClassName('date-label')).forEach(function (elem) {
+
+
+
+
+                elem.classList.remove('date-labbel-scrolled');
+
+
+            });
+            scrolled.style.display = "none"
+            header.style.display = "none"
+        }
+
+
+
+
+    })
+
+
 
 
 })
