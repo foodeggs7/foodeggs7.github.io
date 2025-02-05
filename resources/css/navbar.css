@@ -221,15 +221,16 @@ width: auto;
 }
 
 .Button-header{
-    font-size: 50;
+    font-size: 30px;
     width: 40px;
     height: 40px;
+    color: var(--TextColor1);
 }
 
-.projects-page-header-back{
-    font-size: 50px;
-    width: 70px;
-    height: 70px;
+.projects-page-header-back i{
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
     color: var(--TextColor1);
     display: flex;
     flex-direction: row;
@@ -245,7 +246,7 @@ width: auto;
 
 .coment-button-top {
     width: 80px;
-    height: 40px;
+    height: 30px;
     font-size: 20px;
     border-width: 0px;
     border-bottom: 2px solid var(--borderColor);
