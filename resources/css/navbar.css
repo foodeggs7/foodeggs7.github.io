@@ -63,8 +63,9 @@
 .home-Logo-Button{
     min-height: 60px;
     max-height: 70px;
-    width: auto;
+    width: 50px;
     height: 90%;
+    overflow: hidden;
 }
 
 .home-Logo-Button img{
@@ -210,6 +211,7 @@ width: auto;
 .projects-page-header-main {
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 .projects-page-header-title,
@@ -223,10 +225,27 @@ width: auto;
     width: 70px;
     height: 70px;
     color: var(--TextColor1);
+    display: flex;
+    flex-direction: row;
 }
 
 .date-labbel-scrolled {
     position: relative;
+}
+
+.projects-page-header-title h2 {
+    font-size: 20px;
+}
+
+.coment-button-top {
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    border-width: 0px;
+    border-bottom: 2px solid var(--borderColor);
+    background-color: var(--cta);
+    margin: 5px;
+    border-radius: var(--CornerRadius);
 }
 
 @media (max-width: 1400px) {
@@ -266,9 +285,20 @@ width: auto;
     }
 
     .projects-page-header-back{
-        font-size: 30px;
-        width: 50px;
-        height: 50px;
+        font-size: 25px;
+        width: 35px;
+        height: 35px;
         color: var(--TextColor1);
+    }
+
+    .projects-page-header-title h2 {
+        font-size: 15px;
+    }
+
+    .coment-button-top {
+       
+        width: 80px;
+        height: 20px;
+        font-size: 14px;
     }
 }
