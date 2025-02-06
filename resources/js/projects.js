@@ -21,9 +21,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     document.getElementById('Project-Title-En').textContent = data.TitleEn
                     document.getElementById('Project-Title-Nl').textContent = data.TitleNl
 
+                    document.getElementById('Project-Title-top-En').textContent = data.TitleEn
+                    document.getElementById('Project-Title-top-Nl').textContent = data.TitleNl
+
                     if (data.openSource) {
                         console.log('show')
                         document.getElementById('download-Button').style.display = "flex"
+                        document.getElementById('download-Button-top').style.display = "flex"
 
                         fetch(`${root}${data.files}`)
                             .then(response => response.text())
@@ -43,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (data.webpage) {
                         console.log('show')
                         document.getElementById('links-Button').style.display = "flex"
+                        document.getElementById('links-Button-top').style.display = "flex"
                         fetch(`${root}${data.links}`)
                             .then(response => response.text())
                             .then(data => {

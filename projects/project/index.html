@@ -21,9 +21,10 @@
         <div class="project-main">
             <article id="ProjectRoot">
                 <section class="project-first">
-                    <div class="project-content" >
+                    <div class="project-content">
                         <div class="project-Title">
-                            <a class="GoBackToAllProjects" href="https://foodeggs7.github.io/projects/"><i class="project-back ri-arrow-left-fill"></i></a>
+                            <a class="GoBackToAllProjects" href="https://foodeggs7.github.io/projects/"><i
+                                    class="project-back ri-arrow-left-fill"></i></a>
                             <h2 class="ProjectTitle lang lang-en" id="Project-Title-En">this a very long project title
                                 thats loading...</h2>
                             <h2 class="ProjectTitle lang lang-nl" id="Project-Title-Nl">dit is een heele lange project
@@ -140,9 +141,9 @@
                 <h3 class="lang lang-nl">linkjes die bij dit project horen</h3>
                 <i class="ri-close-circle-fill popup-close"></i>
             </div>
-            <div id="popup-links-content"class="popup-content Scroll-Y" >
-              
-               <!-- <div class="lang lang-en">
+            <div id="popup-links-content" class="popup-content Scroll-Y">
+
+                <!-- <div class="lang lang-en">
                     <div id="popup-links-content-EN" class="popup-content Scroll-Y">
 
                     </div>
@@ -163,7 +164,7 @@
                 <i class="ri-close-circle-fill popup-close"></i>
             </div>
             <div id="popup-downloads-content" class="popup-content Scroll-Y">
-               <!-- <div class="lang lang-en">
+                <!-- <div class="lang lang-en">
                     <div id="popup-downloads-content-EN" class="popup-content Scroll-Y">
 
                     </div>
@@ -182,34 +183,36 @@
         <div class="psudo-topbar">
             <div class="navbar-left">
                 <ul>
-                     <li>
-                         <a class="home-Logo-Button" href="https://foodeggs7.github.io"><img src="https://foodeggs7.github.io/resources/img/foodeggs7.png" alt="website logo klik hier om naar de home pagina te gaan"></a>
-                         <a lang="en" id ="Date"> booting...</a>
-                     </li>
-                 </ul> 
-             </div>
-             <div class="navbar-right">
+                    <li>
+                        <a class="home-Logo-Button" href="https://foodeggs7.github.io"><img
+                                src="https://foodeggs7.github.io/resources/img/foodeggs7.png"
+                                alt="website logo klik hier om naar de home pagina te gaan"></a>
+                        <a lang="en" id="Date"> booting...</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-right">
                 <div id="P-langSelector">
 
                 </div>
-                
-                
-                 
-                 <ul class="Desktop-NavButtons">
-                      <li>
+
+
+
+                <ul class="Desktop-NavButtons">
+                    <li>
                         <div class="P-Desktop-NavButtonsr">
 
                         </div>
-                      </li>
-                      <li>
+                    </li>
+                    <li>
                         <div class="P-Desktop-NavButtonsr">
 
                         </div>
-                      </li>
-                      
-                  </ul> 
-                  <i class="hamburger ri-menu-line" id="Hamburger-Toggle"></i>
-              </div>
+                    </li>
+
+                </ul>
+                <i class="hamburger ri-menu-line" id="Hamburger-Toggle"></i>
+            </div>
         </div>
         <div class="LoadingIndicator"><span>fetching data...</span></span></div>
         <p id="LoadingTextForPage" style="display: none;">load project</p>
@@ -230,23 +233,45 @@
     <script>
 
         document.addEventListener('DOMContentLoaded', function () {
-            const linkButton = document.getElementById('links-Button')
-            const linkPopup = document.getElementById('popup-links')
 
-            const dlButton = document.getElementById('download-Button')
-            const dlPopup = document.getElementById('popup-downloads')
 
-            const popup = document.getElementById('popup')
+            function listenForButtonClick() {
 
-            linkButton.addEventListener('click', () => {
-                linkPopup.style.display = "flex"
-                popup.style.display = "flex"
-            })
+                const linkButton = document.getElementById('links-Button')
+                const linkPopup = document.getElementById('popup-links')
 
-            dlButton.addEventListener('click', () => {
-                dlPopup.style.display = "flex"
-                popup.style.display = "flex"
-            })
+                const linkButtonTop = document.getElementById('links-Button-top')
+
+                const dlButton = document.getElementById('download-Button')
+                const dlPopup = document.getElementById('popup-downloads')
+
+                const dlButtonTop = document.getElementById('download-Button-top')
+
+                const popup = document.getElementById('popup')
+                linkButton.addEventListener('click', () => {
+                    linkPopup.style.display = "flex"
+                    popup.style.display = "flex"
+                })
+
+                dlButton.addEventListener('click', () => {
+                    dlPopup.style.display = "flex"
+                    popup.style.display = "flex"
+                })
+
+                linkButtonTop.addEventListener('click', () => {
+                    linkPopup.style.display = "flex"
+                    popup.style.display = "flex"
+                })
+
+                dlButtonTop.addEventListener('click', () => {
+                    dlPopup.style.display = "flex"
+                    popup.style.display = "flex"
+                })
+            }
+
+
+            setTimeout(listenForButtonClick, 3000)
+
         })
 
     </script>
