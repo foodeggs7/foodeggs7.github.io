@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     } else {
                         console.log('hide')
                         document.getElementById('download-Button').style.display = "none"
+                        document.getElementById('download-Button-top').style.display = "none"
                     }
 
 
@@ -56,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     } else {
                         console.log('hide')
                         document.getElementById('links-Button').style.display = "none"
+                        document.getElementById('links-Button-top').style.display = "none"
                     }
 
 
