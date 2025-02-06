@@ -1,0 +1,84 @@
+{
+    "JsonVersion": 1,
+    
+    "Date": "02-08-2022",
+    "Time": "17:35",
+    "UTC": 1,
+    "UpdDate": "17-09-2022",
+    "UpdTime": "19:06",
+    "UpdUTC": 1,
+    "PostDate": "24-01-2025",
+    "PostTime": "16:50",
+    "PostUTC": 2,
+    "postUpdDate": "29-01-2025",
+    "postUpdTime": "16:35",
+    "PostUpdUTC": 2,
+
+    "openSource": false,
+    "filesEN": "<a href=\"../../resources/downloads/lol.css\" download=\"lol.css\"> link 1</a><a href=\"../../resources/downloads/lol.css\" download=\"lol.css\"> link 2</a>",
+    "filesNL": "<a href=\"../../resources/downloads/lol.css\" download=\"lol.css\"> link 1</a><a href=\"../../resources/downloads/lol.css\" download=\"lol.css\"> link 2</a>",
+    "files": "",
+     "webpage": true,
+     "linksEN": "",
+
+     "linksNL": "<a href=\"https://create.roblox.com/store/asset/10744642891/ackerswoude-rijtjes-huis-nr-39-tm-47\">rijtjes huizen</a><br><a href=\"https://create.roblox.com/store/asset/10669895603\">vila met ondergrondse gerage</a><br><a href=\"https://create.roblox.com/store/asset/11027960652/closet-2-kast\">kast met deur</a><br><a href='https://create.roblox.com/store/asset/10484324172/closet'>goeken kast</a><br><a href='https://create.roblox.com/store/asset/10463043583/table'>tafel</a><br><a href='https://create.roblox.com/store/asset/10817273584/stair'>chair</a><br><a href='https://create.roblox.com/store/asset/11124093431/beuro'>beuro</a><br><a href='https://create.roblox.com/store/asset/11143878066/beuro-stair'>beuro stoel</a> <br><a href='https://create.roblox.com/store/asset/10463060330/bridge-brug-pijnacker-v1'>houten brug</a><br><a href='https://create.roblox.com/store/asset/10463092242/brug-2-pijnacker-v1'>stenen brug</a>",
+
+     "links": "projectsRaw/project1/links.html",
+    "TitleNl": "mijn eerste models",
+    "TitleEn": "first models i made",
+
+    "ThumbNl": "",
+    "thumbEn": "",
+
+    "ShortDescNl": "",
+    "ShortDescEn": "",
+
+    "descriptionNl": "projectsRaw/project2/opNL.html",
+    "descriptionEn": "projectsRaw/project2/opEN.html",
+
+    "commends": {
+        "totalNl": 1,
+        "totalEn": 2,
+        "TotalCommends": 2,
+        "Commend1": {
+            "ENG": true,
+            "NL": true,
+            "userThumb": "",
+            "userName": "username test",
+            "date": "01-04-2025",
+            "time": "01:30",
+            "UTC": -2,
+            "contentEn": "<h2>header</h2><p>lorem ipsum dolar sit ahmet</p>",
+            "contentNl": "<h2>kopje</h2><p>de paragraaf</p>"
+        },
+        "Commend2": {
+            "ENG": true,
+            "NL": false,
+            "userThumb": "",
+            "userName": "lol",
+            "date": "01-09-2025",
+            "time": "01:39",
+            "UTC": 8,
+            "contentEn": "<h2>header</h2><p>this some paragraph just test</p>",
+            "contentNl": ""
+        },
+        "template1": {
+            "userThumb": "",
+            "userName": "username test",
+            "date": "01-04-2025",
+            "time": "01:30",
+            "UTC": -2,
+            "contentEn": "<h2>header</h2><p>lorem ipsum dolar sit ahmet</p>",
+            "contentNl": ""
+        },
+        "template2": {
+            "userThumb": "",
+            "userName": "yo",
+            "date": "01-04-2025",
+            "time": "01:30",
+            "UTC": -2,
+            "contentEn": "<h2>header</h2><p>this some paragraph just test</p>",
+            "contentNl": ""
+        }
+    }
+}

@@ -300,7 +300,22 @@ body {
     border-radius: var(--CornerRadius);
 }
 
+.Reply {
+    position: fixed;
+    display: none;
+    height: calc(100vh - 70px);
+    bottom: 0px;
+    width: 100%;
+    overflow: hidden;
+    /* overflow-y: scroll; */
+    
+}
 
+.test {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
 
 @media (max-width: 950px) {
     .user-name {
