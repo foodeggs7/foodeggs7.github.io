@@ -37,7 +37,7 @@
                                 <div id="links-Button">
                                     <i class="ri-global-line"></i>
                                 </div>
-                                <button class="coment-button lang lang-en">
+                                <button id="coment-button-en" class="coment-button lang lang-en">
                                     coment
                                 </button>
                                 <button class="coment-button lang lang-nl">
@@ -135,25 +135,49 @@
     </section>
 
     <section class="Reply" id="Reply-Frame">
-        <form action="" method="">
-           
+        <form action="index.html" method="">
+
             <div id="Reply-username" class="Reply-Frame-main">
                 <div class="Reply-Frame-content">
                     <label class="lang lang-en" for="username">your username</label>
                     <label class="lang lang-nl" for="username">je gebruikersnaam</label>
                     <br>
-                    <input type="text" name="username" id="username">
+                    <input type="text" name="username" id="username" pattern="[A-Za-z0-9]_{0,1}" required>
                     <br>
-                    <p class="input-desc lang lang-en">DONT use your real name (roblox project prefer use your roblox username) this the name that shown by your reply</p>
-                    <p class="input-desc lang lang-nl">gebruik NIET je echte naam (roblox project liever je roblox user) dit is de naam dat word geshowd bij jouw reply</p>
+                    <div class="ValidateError" id="username-val"></div>
+                    <div class="ValidateError" id="username-val-en"></div>
+                    <br>
+                    <p class="input-desc lang lang-en">DONT use your real name (roblox project prefer use your roblox
+                        username) this the name that shown by your reply</p>
+                    <p class="input-desc lang lang-nl">gebruik NIET je echte naam (roblox project liever je roblox user)
+                        dit is de naam dat word geshowd bij jouw reply</p>
+                    <br>
+                    <label class="lang lang-en" for="email">your email</label>
+                    <label class="lang lang-nl" for="email">je email</label>
+                    <br>
+                    <input type="email" name="email" id="email" required>
+                    <br>
+                    <div class="ValidateError" id="email-val"></div>
+                    <div class="ValidateError" id="email-val-en"></div>
+                    <br>
+                    <p class="input-desc lang lang-en">PREVER not use your peivate email your email be used to notify you if your reply be posted or not</p>
+                    <p class="input-desc lang lang-nl">Liever niet je privee email gebruiken je email word gebruikt om je te laten weten of je reactie wordt gepost</p>
                     <br>
                     <div class="Reply-Frame-navigation">
-                        <a class="Reply-Frame-navigation-Button lang lang-en" href="#Reply-username02" role="button">Next</a>
-                        <a class="Reply-Frame-navigation-Button lang lang-nl" href="#Reply-username02" role="button">Volgende</a>
+                        <a class="Reply-Frame-navigation-Button lang lang-en" href="#Reply-username02" onclick="return validateForm(event, 
+                        ['username', 'email'], 
+                        ['username-val', 'email-val'], 
+                        ['fill in this field', 'fill your eamil adress in'], 
+                        ['invalid username it might only contain twenty charachters and _ one time and numbers', 'invalid email adress use a @'])">Next</a>
+                        <a class="Reply-Frame-navigation-Button lang lang-nl" href="#Reply-username02" onclick="return validateForm(event, 
+                        ['username', 'email'], 
+                        ['username-val', 'email-val'], 
+                        ['Vul dit veld in', 'Vul je e-mailadres in'], 
+                        ['Ongeldige gebruikersnaam', 'Ongeldig e-mailadres'])">Volgende</a>
                     </div>
                 </div>
             </div>
-    
+
             <div id="Reply-username02" class="Reply-Frame-main">
                 <div class="Reply-Frame-content">
                     <label class="lang lang-en" for="username">your username</label>
@@ -164,14 +188,18 @@
                     <p class="input-desc lang lang-nl">-</p>
                     <br>
                     <div class="Reply-Frame-navigation">
-                        <a class="Reply-Frame-navigation-Button lang lang-en" href="#Reply-username" role="button">Back</a>
-                        <a class="Reply-Frame-navigation-Button lang lang-nl" href="#Reply-username" role="button">Vorige</a>
-                        <a class="Reply-Frame-navigation-Button lang lang-en" href="#Reply-username03" role="button">Next</a>
-                        <a class="Reply-Frame-navigation-Button lang lang-nl" href="#Reply-username03" role="button">Volgende</a>
+                        <a class="Reply-Frame-navigation-Button lang lang-en" href="#Reply-username"
+                            role="button">Back</a>
+                        <a class="Reply-Frame-navigation-Button lang lang-nl" href="#Reply-username"
+                            role="button">Vorige</a>
+                        <a class="Reply-Frame-navigation-Button lang lang-en" href="#Reply-username03"
+                            role="button">Next</a>
+                        <a class="Reply-Frame-navigation-Button lang lang-nl" href="#Reply-username03"
+                            role="button">Volgende</a>
                     </div>
                 </div>
             </div>
-    
+
             <div id="Reply-username03" class="Reply-Frame-main">
                 <div class="Reply-Frame-content">
                     <label class="lang lang-en" for="username">your username</label>
@@ -182,14 +210,16 @@
                     <p class="input-desc lang lang-nl">--</p>
                     <br>
                     <div class="Reply-Frame-navigation">
-                        <a class="Reply-Frame-navigation-Button lang lang-en" href="#Reply-username02" role="button">Back</a>
-                        <a class="Reply-Frame-navigation-Button lang lang-nl" href="#Reply-username02" role="button">Vorige</a>
+                        <a class="Reply-Frame-navigation-Button lang lang-en" href="#Reply-username02"
+                            role="button">Back</a>
+                        <a class="Reply-Frame-navigation-Button lang lang-nl" href="#Reply-username02"
+                            role="button">Vorige</a>
                     </div>
                 </div>
             </div>
         </form>
     </section>
-    
+
     <section class="popup" id="popup">
         <div id="popup-links" class="popupFrame">
             <div class="popup-topbar">
@@ -303,7 +333,11 @@
 
                 const dlButtonTop = document.getElementById('download-Button-top')
 
+                const replyButtonEN = document.getElementById('coment-button-en')
+
                 const popup = document.getElementById('popup')
+                const form = document.getElementById('Reply-Frame')
+
                 linkButton.addEventListener('click', () => {
                     linkPopup.style.display = "flex"
                     popup.style.display = "flex"
@@ -323,6 +357,10 @@
                     dlPopup.style.display = "flex"
                     popup.style.display = "flex"
                 })
+
+                replyButtonEN.addEventListener('click', () => {
+                    form.style.display = "block"
+                })
             }
 
 
@@ -331,6 +369,62 @@
         })
 
     </script>
+
+<script>
+    function validateForm(event, fields, errorIds, requiredMsgs, invalidMsgs) {
+        event.preventDefault(); // Stop navigation
+        let isValid = true;
+
+        for (let i = 0; i < fields.length; i++) {
+            let inputField = document.getElementById(fields[i]);
+            let errorMsg = document.getElementById(errorIds[i]);  // Error message span
+
+            // Reset error messages
+            errorMsg.innerText = "";
+            inputField.style.borderColor = "var(--cta)"
+
+            // Check if field is empty
+            if (!inputField || inputField.value.trim() === "") {
+                errorMsg.innerText = requiredMsgs[i]; // Set "required field" message
+                inputField.style.borderColor = "red"
+                isValid = false;
+            }
+            else {
+                // If pattern is provided, use it for validation
+                let patternToUse = inputField.pattern ? new RegExp(inputField.pattern) : null;
+
+                if (patternToUse) {
+                    // Custom pattern validation if a pattern is specified
+                    if (!patternToUse.test(inputField.value.trim())) {
+                        errorMsg.innerText = invalidMsgs[i]; // Set "invalid input" message
+                        inputField.style.borderColor = "orange"
+                        isValid = false;
+                    }
+                } else {
+                    // Use default HTML validation if no pattern is specified (e.g., type="email")
+                    if (!inputField.checkValidity()) {
+                        errorMsg.innerText = invalidMsgs[i]; // Set "invalid input" message
+                        inputField.style.borderColor = "orange"
+
+                        isValid = false;
+                    }
+                }
+            }
+        }
+
+        // Only navigate if ALL fields are valid
+        if (isValid) {
+            window.location.href = event.target.href;
+        }
+
+        return false; // Prevents navigation if invalid
+    }
+</script>
+
+
+
+
+
 </body>
 
 </html>

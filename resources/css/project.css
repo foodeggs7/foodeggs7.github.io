@@ -6,6 +6,7 @@
     --Sec2: #055a4a;
     --Sec: #06c46f;
     --CornerRadius: 10px;
+    --FormCornerRadiusSmall: 6px;
     --TextColor1: #333333;
     --TextColor2: #ffffff;
     --shadow: 0 2px 2px rgba(0,0,0,0.1);
@@ -339,7 +340,8 @@ body {
 
 .Reply-Frame-content {
     width: 500px;
-    height: 300px;
+    min-height: 200px;
+    max-height: 500px;
     background-color: var(--background);
     border: 1px solid var(--BorderColor);
     border-radius: var(--CornerRadius);
@@ -351,6 +353,32 @@ body {
     justify-items: center;
     padding: 30px;
     overflow-y: scroll;
+}
+
+.Reply label {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.Reply input {
+    width: 400px;
+    height: 50px;
+    margin: 10px;
+    border-radius: var(--FormCornerRadiusSmall);
+    border: 2px solid var(--cta);
+}
+
+.Reply input:active {
+    border: 2px solid var(--BorderColor);
+}
+
+.Reply input:hover {
+    border: 2px solid var(--BorderColor);
+}
+
+.Reply input:focus {
+    border: 2px solid var(--Sec2);
+    outline: none;
 }
 
 
@@ -438,10 +466,22 @@ body {
 
     .Reply-Frame-content {
         width: 250px;
-        height: 150px;
+        min-height: 150px;
+        max-height: 500px;
        
         padding: 15px;
         overflow-y: scroll;
+    }
+
+    .Reply label {
+        font-weight: 900;
+        font-size: 20px;
+    }
+    
+    .Reply input {
+        width: 200px;
+        height: 50px;
+        margin: 10px;
     }
 
     
