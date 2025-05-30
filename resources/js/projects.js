@@ -129,17 +129,10 @@ document.addEventListener('DOMContentLoaded', function () {
                         let Dataroot = data.commends[templateKey];
                         console.log(Dataroot)
 
-                        if (Dataroot.NL) {
-                            var Comment = document.getElementById('Commend-NL').content
-                            var NewComent = document.importNode(Comment, true)
-
-                            let userThumb = Dataroot.userThumb
+                        function AddPFP(userThumb){
                             var userPic = NewComent.querySelector('.User-Pic');
-
-                            //NewComent.querySelector('.User-Pic').src = 
-
                             if (userThumb > 0) {
-                                var api = `https://thumbnails.roblox.com/v1/users/avatar?userIds=${userThumb}&size=30x30&format=Png&isCircular=false`
+                                var api = `https://thumbnails.roproxy.com/v1/users/avatar?userIds=${userThumb}&size=30x30&format=Png&isCircular=false`
 
                                 fetch(api)
                                     .then(response => response.json())
@@ -160,6 +153,18 @@ document.addEventListener('DOMContentLoaded', function () {
                                 userPic.src = `https://foodeggs7.github.io/resources/img/pfp/${Imgs[userThumb]}`
 
                             }
+                        }
+                        if (Dataroot.NL) {
+                            var Comment = document.getElementById('Commend-NL').content
+                            var NewComent = document.importNode(Comment, true)
+
+                            let userThumb = Dataroot.userThumb
+                            
+
+                            //NewComent.querySelector('.User-Pic').src = 
+
+                            AddPFP(userThumb)
+                            
                             NewComent.querySelector('.user-name').textContent = Dataroot.userName
                             NewComent.querySelector('.comment-date').textContent = `${Dataroot.date} | ${Dataroot.time} | ${Dataroot.UTC}`
                             NewComent.querySelector('.comment-content').innerHTML = Dataroot.contentNl
@@ -172,30 +177,10 @@ document.addEventListener('DOMContentLoaded', function () {
                             var NewComent = document.importNode(Comment, true)
 
                             let userThumb = Dataroot.userThumb
-                            var userPic = NewComent.querySelector('.User-Pic');
+                                                        
+                            AddPFP(userThumb)
 
-                            if (userThumb > 0) {
-                                var api = `https://thumbnails.roblox.com/v1/users/avatar?userIds=${userThumb}&size=30x30&format=Png&isCircular=false`
 
-                                fetch(api)
-                                    .then(response => response.json())
-                                    .then(data => {
-                                        userPic.src = data.data[0].imageUrl
-                                    })
-
-                            } else {
-                                const Imgs = {
-                                    "-1": "Cat.jpg",
-                                    "-2": "mars.jpg",
-                                    "-3": "Featuristic.jpg",
-                                    "-4": "Child.jpg",
-                                    "-5": "Robot.jpg",
-                                    "-6": "Robot2.jpg"
-                                }
-
-                                userPic.src = `https://foodeggs7.github.io/resources/img/pfp/${Imgs[userThumb]}`
-
-                            }
                             // NewComent.querySelector('.User-Pic').src = Dataroot.userThumb
                             NewComent.querySelector('.user-name').textContent = Dataroot.userName
                             NewComent.querySelector('.comment-date').textContent = `${Dataroot.date} | ${Dataroot.time} | ${Dataroot.UTC}`
