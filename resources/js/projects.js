@@ -137,28 +137,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
                            //NewComent.querySelector('.User-Pic').src = 
 
-                        //    if (userThumb > 0){
-                        //     var api = `https://thumbnails.roblox.com/v1/users/avatar?userIds=${userThumb}&size=30x30&format=Png&isCircular=false`
+                           if (userThumb > 0){
+                            var api = `https://thumbnails.roblox.com/v1/users/avatar?userIds=${userThumb}&size=30x30&format=Png&isCircular=false`
 
-                        //      fetch(api)
-                        //     .then(response => response.text())
-                        //     .then(data => {
-                        //         NewComent.querySelector('.User-Pic').src = data[1].imageUrl
-                        //     })
+                             fetch(api)
+                            .then(response => response.text())
+                            .then(data => {
+                                NewComent.querySelector('.User-Pic').src = data[1].imageUrl
+                            })
 
-                        //    } else {
-                        //     const Imgs = {
-                        //         "-1": "Cat.jpg",
-                        //         "-2": "mars.jpg",
-                        //         "-3": "Featuristic.jpg",
-                        //         "-4": "Child.jpg",
-                        //         "-5": "Robot.jpg",
-                        //         "-6": "Robot2.jpg"
-                        //     }
+                           } else {
+                            const Imgs = {
+                                "-1": "Cat.jpg",
+                                "-2": "mars.jpg",
+                                "-3": "Featuristic.jpg",
+                                "-4": "Child.jpg",
+                                "-5": "Robot.jpg",
+                                "-6": "Robot2.jpg"
+                            }
 
-                        //     NewComent.querySelector('.User-Pic').src = `https://foodeggs7.github.io/resources/img/pfp/${Imgs[userThumb]}`
+                            NewComent.querySelector('.User-Pic').src = `https://foodeggs7.github.io/resources/img/pfp/${Imgs[userThumb]}`
 
-                        //    }
+                           }
                             NewComent.querySelector('.user-name').textContent = Dataroot.userName
                             NewComent.querySelector('.comment-date').textContent = `${Dataroot.date} | ${Dataroot.time} | ${Dataroot.UTC}`
                             NewComent.querySelector('.comment-content').innerHTML = Dataroot.contentNl
