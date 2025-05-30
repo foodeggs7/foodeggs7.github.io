@@ -68,13 +68,14 @@ background-image: url("../img/portal2.png");
     border: 2px solid var(--scifi-bleu);
     opacity: 80%;  
     box-shadow: var(--scifi-blue-shadow);
+ 
 }
 
 .portfolio-r-card h2,
 .portfolio-r-card h6,
 .portfolio-r-card p {
     color: var(--scifi-bleu);
-
+    padding: 2px 10px;
 }
 
 .portfolio-r-card-top {
@@ -89,6 +90,7 @@ background-image: url("../img/portal2.png");
 .health-meter-inner {
   height: 100%;
   background-color: var(--scifi-bleu);
+
 }
 
 .health {
