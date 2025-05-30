@@ -94,14 +94,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
                             const tempDiv = document.createElement('div');
                             tempDiv.innerHTML = data;
-                    
+
                             // Select all <meta> tags and remove them
                             const metaTags = tempDiv.querySelectorAll('meta');
                             metaTags.forEach(metaTag => metaTag.remove());
 
                             const Style = tempDiv.querySelectorAll('style');
                             Style.forEach(Style => Style.remove());
-                    
+
                             // Now set the remaining content (without <head>) to the target element
                             document.getElementById('Project-Info-Nl').innerHTML = tempDiv.innerHTML;
 
@@ -112,11 +112,11 @@ document.addEventListener('DOMContentLoaded', function () {
                         .then(data => {
                             const tempDiv = document.createElement('div');
                             tempDiv.innerHTML = data;
-                    
+
                             // Select all <meta> tags and remove them
                             const metaTags = tempDiv.querySelectorAll('meta');
                             metaTags.forEach(metaTag => metaTag.remove());
-                            
+
                             const Style = tempDiv.querySelectorAll('style');
                             Style.forEach(Style => Style.remove());
 
@@ -134,31 +134,32 @@ document.addEventListener('DOMContentLoaded', function () {
                             var NewComent = document.importNode(Comment, true)
 
                             let userThumb = Dataroot.userThumb
+                            var userPic = NewComent.querySelector('.User-Pic');
 
-                           //NewComent.querySelector('.User-Pic').src = 
+                            //NewComent.querySelector('.User-Pic').src = 
 
-                           if (userThumb > 0){
-                            var api = `https://thumbnails.roblox.com/v1/users/avatar?userIds=${userThumb}&size=30x30&format=Png&isCircular=false`
+                            if (userThumb > 0) {
+                                var api = `https://thumbnails.roblox.com/v1/users/avatar?userIds=${userThumb}&size=30x30&format=Png&isCircular=false`
 
-                             fetch(api)
-                            .then(response => response.text())
-                            .then(data => {
-                                NewComent.querySelector('.User-Pic').src = data[1].imageUrl
-                            })
+                                fetch(api)
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        userPic.src = data.data[0].imageUrl
+                                    })
 
-                           } else {
-                            const Imgs = {
-                                "-1": "Cat.jpg",
-                                "-2": "mars.jpg",
-                                "-3": "Featuristic.jpg",
-                                "-4": "Child.jpg",
-                                "-5": "Robot.jpg",
-                                "-6": "Robot2.jpg"
+                            } else {
+                                const Imgs = {
+                                    "-1": "Cat.jpg",
+                                    "-2": "mars.jpg",
+                                    "-3": "Featuristic.jpg",
+                                    "-4": "Child.jpg",
+                                    "-5": "Robot.jpg",
+                                    "-6": "Robot2.jpg"
+                                }
+
+                                userPic.src = `https://foodeggs7.github.io/resources/img/pfp/${Imgs[userThumb]}`
+
                             }
-
-                            NewComent.querySelector('.User-Pic').src = `https://foodeggs7.github.io/resources/img/pfp/${Imgs[userThumb]}`
-
-                           }
                             NewComent.querySelector('.user-name').textContent = Dataroot.userName
                             NewComent.querySelector('.comment-date').textContent = `${Dataroot.date} | ${Dataroot.time} | ${Dataroot.UTC}`
                             NewComent.querySelector('.comment-content').innerHTML = Dataroot.contentNl
@@ -170,6 +171,31 @@ document.addEventListener('DOMContentLoaded', function () {
                             var Comment = document.getElementById('Commend-EN').content
                             var NewComent = document.importNode(Comment, true)
 
+                            let userThumb = Dataroot.userThumb
+                            var userPic = NewComent.querySelector('.User-Pic');
+
+                            if (userThumb > 0) {
+                                var api = `https://thumbnails.roblox.com/v1/users/avatar?userIds=${userThumb}&size=30x30&format=Png&isCircular=false`
+
+                                fetch(api)
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        userPic.src = data.data[0].imageUrl
+                                    })
+
+                            } else {
+                                const Imgs = {
+                                    "-1": "Cat.jpg",
+                                    "-2": "mars.jpg",
+                                    "-3": "Featuristic.jpg",
+                                    "-4": "Child.jpg",
+                                    "-5": "Robot.jpg",
+                                    "-6": "Robot2.jpg"
+                                }
+
+                                userPic.src = `https://foodeggs7.github.io/resources/img/pfp/${Imgs[userThumb]}`
+
+                            }
                             // NewComent.querySelector('.User-Pic').src = Dataroot.userThumb
                             NewComent.querySelector('.user-name').textContent = Dataroot.userName
                             NewComent.querySelector('.comment-date').textContent = `${Dataroot.date} | ${Dataroot.time} | ${Dataroot.UTC}`

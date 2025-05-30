@@ -201,6 +201,7 @@ body {
     border-radius: var(--CornerRadius);
     overflow: hidden; 
     box-shadow: var(--shadow);
+    padding: 10px;
 }
 
 .comment {
@@ -211,6 +212,8 @@ body {
 .comment-info {
     display: flex;
     flex-direction: row;
+    /* padding: 10px; */
+    gap: 5px;
 }
 
 .comment-info-left {
@@ -219,12 +222,19 @@ body {
     align-items: center;
     justify-content: left;
     width: 50%;
+    gap: 5px;
 }
 .comment-info-right {
     display: flex;
     align-items: center;
     justify-content: right;
     width: 40%;
+}
+
+.User-Pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
 }
 
 /*home page for projects*/
