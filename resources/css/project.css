@@ -58,6 +58,44 @@ body {
   height: auto;
 }
 
+.project-content-styles p {
+    color: black;
+}
+
+.project-content-styles .container { margin: 50px auto 40px auto; width: 600px; text-align: center; max-width: 100%;}
+
+      .project-content-styles a { color: #4183c4; text-decoration: none; }
+      .project-content-styles a:hover { text-decoration: underline; }
+
+     .project-content-styles h1 { width: 800px; position:relative; left: -100px; letter-spacing: -1px; line-height: 60px; font-size: 60px; font-weight: 100; margin: 0px 0 50px 0; text-shadow: 0 1px 0 #fff; }
+     .project-content-styles  p { color: black; margin: 20px 0; line-height: 1.6; }
+
+     .project-content-styles .container  ul { list-style: none; margin: 25px 0; padding: 0; }
+     .project-content-styles .container  li { display: table-cell; font-weight: bold; width: 1%; }
+
+     .project-content-styles .logo { display: inline-block; margin-top: 35px; }
+     .project-content-styles .logo-img-2x { display: none; }
+      @media
+     only screen and (-webkit-min-device-pixel-ratio: 2),
+      only screen and (   min--moz-device-pixel-ratio: 2),
+      only screen and (     -o-min-device-pixel-ratio: 2/1),
+      only screen and (        min-device-pixel-ratio: 2),
+      only screen and (                min-resolution: 192dpi),
+      only screen and (                min-resolution: 2dppx) {
+        .project-content-styles .logo-img-1x { display: none; }
+        .project-content-styles .logo-img-2x { display: inline-block; }
+     }
+
+     .project-content-styles #suggestions {
+        margin-top: 35px;
+        /* color: #ccc; */
+      }
+    .project-content-styles  #suggestions a {
+        /* color: #666666; */
+        font-weight: 200;
+        font-size: 14px;
+        margin: 0 10px;
+      }
 
 
 
@@ -69,6 +107,12 @@ body {
 .project-content-styles h5,
 .project-content-styles h6{
   color: var(--cta);
+  left: 0px;
+  max-width: 100%;
+}
+
+.project-content-styles div {
+    max-width: 100%;
 }
 
 
@@ -310,7 +354,7 @@ body {
     width: 100%;
     overflow: hidden;
     bottom: 0;
-    display: none;
+    display: none; /* toggle*/
 }
 
 .Reply form {
@@ -321,6 +365,22 @@ body {
     height: auto; /* Ensures form takes full height */
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+.CloseForm {
+    position: fixed;
+    top: calc(50% - 260px);
+    left: calc(50% + 210px);
+    width: 50px;
+    height: 50px;
+    z-index: 3000;
+
+    border-radius: 100%;
+    border: none;
+    background-color: red;
+    color: #06c46f;
+    font-size: 40px;
 }
 
 .Reply-Frame-main {
@@ -340,8 +400,8 @@ body {
 
 .Reply-Frame-content {
     width: 500px;
-    min-height: 200px;
-    max-height: 500px;
+    /* min-height: 200px; */
+    height: 500px;
     background-color: var(--background);
     border: 1px solid var(--BorderColor);
     border-radius: var(--CornerRadius);
@@ -352,7 +412,8 @@ body {
     justify-self: center;
     justify-items: center;
     padding: 30px;
-    overflow-y: scroll;
+    overflow-y: auto;
+    scrollbar-width: none;
 }
 
 .Reply label {
@@ -361,7 +422,7 @@ body {
 }
 
 .Reply input {
-    width: 400px;
+    width: 340px;
     height: 50px;
     margin: 10px;
     border-radius: var(--FormCornerRadiusSmall);
@@ -379,6 +440,62 @@ body {
 .Reply input:focus {
     border: 2px solid var(--Sec2);
     outline: none;
+}
+
+.Reply textarea{
+    resize: vertical;
+    width: 340px;
+    border-radius: var(--FormCornerRadiusSmall);
+    border: 2px solid var(--cta);
+}
+
+.Reply textarea:active {
+    border: 2px solid var(--BorderColor);
+}
+
+.Reply textarea:hover {
+    border: 2px solid var(--BorderColor);
+}
+
+.Reply textarea:focus {
+    border: 2px solid var(--Sec2);
+    outline: none;
+}
+
+.Reply-fieldset {
+    min-width: 90%;
+    max-width: 95%;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--FormCornerRadiusSmall);
+    border: 2px solid var(--cta);
+}
+
+.Reply-radio-horizontal {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: left;
+    position: relative;
+}
+
+.ProfilePhotoLabelChose1 {
+    position: absolute;
+    left: 50px;
+}
+
+.ProfilePhotoLabelChose2{
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
+.Reply input[type="radio"] {
+    border: 2px solid var(--Sec);
+    outline: none;
+    width: 20px;
+    height: 20px;
 }
 
 
@@ -411,9 +528,87 @@ body {
     background-color: var(--cta);
     margin: 5px;
     border-radius: var(--CornerRadius);
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: var(--TextColor1);
 }
 
+.Reply-Frame-navigation-Button:hover {
+    border: 2px solid var(--borderColor);
+}
+
+
+input[type="submit"] {
+    width: 80px;
+    height: 30px;
+    font-size: 20px;
+    border-width: 0px;
+    border-bottom: 2px solid var(--borderColor);
+    background-color: var(--cta);
+    margin: 5px;
+    border-radius: var(--CornerRadius);
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: var(--TextColor1);
+}
+
+/*profile photo*/
+
+.rbxID {
+    display: none;
+    flex-direction: column;
+}
+
+.AIpic {
+    display: none;
+    grid-template-columns: 90px 90px 90px;
+    grid-template-rows: 90px 90px;
+    gap: 50px;
+}
+
+label[for="AIPic1"], label[for="AIPic2"], label[for="AIPic3"], label[for="AIPic4"], label[for="AIPic5"], label[for="AIPic6"] {
+    position: relative;
+}
+
+label[for="AIPic1"] > img, label[for="AIPic2"] > img, label[for="AIPic3"] > img, label[for="AIPic4"] > img, label[for="AIPic5"] > img, label[for="AIPic6"] > img {
+    width: 100%;
+    border-radius: var(--FormCornerRadiusSmall);
+}
+
+label[for="AIPic1"] > input, label[for="AIPic2"] > input, label[for="AIPic3"] > input, label[for="AIPic4"] > input, label[for="AIPic5"] > input, label[for="AIPic6"] > input {
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+}
+
+#profilep1_2:checked ~ .rbxID {
+    display: flex;
+}
+
+#profilep1_1:checked ~ .AIpic {
+    display: grid;
+}
+
+
+
 @media (max-width: 950px) {
+
+    .AIpic {
+        grid-template-columns: 80px 80px;
+        grid-template-rows: 80px 80px 80px;
+        gap: 10px;
+    }
+
+    .CloseForm {
+        top: calc(50% - 250px);
+        left: calc(50% + 105px);
+        width: 25px;
+        height: 25px;
+        font-size: 20px;
+    }
+
     .user-name {
         font-size: 10px;
     }
@@ -479,9 +674,34 @@ body {
     }
     
     .Reply input {
-        width: 200px;
+        width: 140px;
         height: 50px;
         margin: 10px;
+    }
+
+    input[type="submit"] {
+    width: 80px;
+    height: 30px;
+    font-size: 20px;
+    border-width: 0px;
+    border-bottom: 2px solid var(--borderColor);
+    background-color: var(--cta);
+    margin: 5px;
+    border-radius: var(--CornerRadius);
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: var(--TextColor1);
+}
+
+    .Reply textarea{
+        width: 140px;
+    }
+
+    .Reply-radio-horizontal {
+        width: 100%;
+        flex-direction: column;
+        align-items: start;
     }
 
     

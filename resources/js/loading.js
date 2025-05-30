@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const loadBar = document.getElementById('loadBar')
     const innerLoadBar = document.getElementById('InnerLoadBar')
 
+    const ScrollParent = document.querySelector('html');
+    ScrollParent.style.overflow = "hidden"
     // Typing effect for each span element
     function typeEffect() {
         const span = spans[spanIndex];
@@ -43,6 +45,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     }else if (width >= 100) {
                         setTimeout(() => {
                             loadingScreen.style.display = "none";
+                            ScrollParent.style.overflow = "auto"
+
                         }, 1000); // Wait 1 second after typing before hiding
                     }
                     setTimeout(loadingBar, 300)

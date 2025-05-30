@@ -43,7 +43,7 @@
         "Commend1": {
             "ENG": true,
             "NL": true,
-            "userThumb": "",
+            "userThumb": -1,
             "userName": "username test",
             "date": "01-04-2025",
             "time": "01:30",
@@ -54,7 +54,7 @@
         "Commend2": {
             "ENG": true,
             "NL": false,
-            "userThumb": "",
+            "userThumb": 353459659,
             "userName": "lol",
             "date": "01-09-2025",
             "time": "01:39",
@@ -63,7 +63,7 @@
             "contentNl": ""
         },
         "template1": {
-            "userThumb": "",
+            "userThumb": 0,
             "userName": "username test",
             "date": "01-04-2025",
             "time": "01:30",
@@ -72,7 +72,7 @@
             "contentNl": ""
         },
         "template2": {
-            "userThumb": "",
+            "userThumb": 0,
             "userName": "yo",
             "date": "01-04-2025",
             "time": "01:30",

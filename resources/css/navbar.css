@@ -11,7 +11,7 @@
 
 #NavBar {
     background-color: var(--navbarBG);
-    width: 100%;
+    width: 100vw;
     display: flex;
     height: 70px;
     justify-content: right;
@@ -177,7 +177,7 @@ width: auto;
 
 .psudo-topbar {
     background-color: var(--navbarBG);
-    width: 100%;
+    width: 100vw;
     display: flex;
     height: 70px;
     justify-content: right;

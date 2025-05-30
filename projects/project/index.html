@@ -135,14 +135,19 @@
     </section>
 
     <section class="Reply" id="Reply-Frame">
-        <form action="index.html" method="">
+        <button class="CloseForm" id="CloseTheForm">×</button>
+        <form action="https://api.web3forms.com/submit" method="Post">
+            
+             <input type="hidden" name="access_key" value="8caad4e4-83a2-41e2-82d5-81166a548db4"> 
+             <input type="hidden" name="redirect" value="https://foodeggs7.github.io/projects/project/Sucess/">
+
 
             <div id="Reply-username" class="Reply-Frame-main">
                 <div class="Reply-Frame-content">
                     <label class="lang lang-en" for="username">your username</label>
                     <label class="lang lang-nl" for="username">je gebruikersnaam</label>
                     <br>
-                    <input type="text" name="username" id="username" pattern="[A-Za-z0-9]_{0,1}" required>
+                    <input type="text" name="username" id="username" pattern="^[A-Za-z0-9_]{1,20}$" required>
                     <br>
                     <div class="ValidateError" id="username-val"></div>
                     <div class="ValidateError" id="username-val-en"></div>
@@ -180,40 +185,102 @@
 
             <div id="Reply-username02" class="Reply-Frame-main">
                 <div class="Reply-Frame-content">
-                    <label class="lang lang-en" for="username">your username</label>
-                    <label class="lang lang-nl" for="username">je gebruikersnaam</label>
-                    <input type="text" name="username" id="username">
-                    <br>
-                    <p class="input-desc lang lang-en">-</p>
-                    <p class="input-desc lang lang-nl">-</p>
+                    <fieldset class="Reply-fieldset">
+                        <legend class="lang lang-en">profile photo</legend>
+                        <legend class="lang lang-nl">profiel foto</legend>
+                    
+                        <div class="Reply-radio-horizontal">
+                            <label class="lang lang-en ProfilePhotoLabelChose1" for="profilep1_1">ai picture</label>
+                            <label class="lang lang-nl ProfilePhotoLabelChose1" for="profilep1_1">ai afbeelding</label>
+                            <input type="radio" name="profileP1" id="profilep1_1">
+                            <!-- </div> -->
+                    
+                            <!-- <div class="Reply-radio-horizontal"> -->
+                            <label class="lang lang-en ProfilePhotoLabelChose2" for="profilep1_2">roblox profile photo</label>
+                            <label class="lang lang-nl ProfilePhotoLabelChose2" for="profilep1_2">roblox profiel foto</label>
+                            <input type="radio" name="profileP1" id="profilep1_2">
+
+                            <br>
+                            <p class="input-desc lang lang-en">chose wich kind of profile picture you will use either ai generated or your
+                                roblox avatar</p>
+                            <p class="input-desc lang lang-nl">kiez wat sort profiel foto je wil gebruiken gegenereerd door ai of je roblox
+                                avatar</p>
+                    
+                            <div class="rbxID">
+                                <label for="userID">Whats your User ID</label>
+                                <input type="number" id="userID" name="userID" min="1">
+                            </div>
+                    
+                            <div class="AIpic">
+                                <label for="AIPic1">
+                                    <img src="../../resources/img/pfp/Cat.jpg">
+                                    <input type="radio" class="AiPicRadio" value="-1" id="AIPic1" name="AIPic">
+                                </label>
+                                <label for="AIPic2">
+                                    <img src="../../resources/img/pfp/mars.jpg">
+                                    <input type="radio" class="AiPicRadio" value="-2" id="AIPic2" name="AIPic">
+                                </label>
+                                <label for="AIPic3">
+                                    <img src="../../resources/img/pfp/Featuristic.jpg">
+                                    <input type="radio" class="AiPicRadio" value="-3" id="AIPic3" name="AIPic">
+                                </label>
+                                <label for="AIPic4">
+                                    <img src="../../resources/img/pfp/Child.jpg">
+                                    <input type="radio" class="AiPicRadio" value="-4" id="AIPic4" name="AIPic">
+                                </label>
+                                <label for="AIPic5">
+                                    <img src="../../resources/img/pfp/Robot.jpg">
+                                    <input type="radio" class="AiPicRadio" value="-5" id="AIPic5" name="AIPic">
+                                </label>
+                                <label for="AIPic6">
+                                    <img src="../../resources/img/pfp/Robot2.jpg">
+                                    <input type="radio" class="AiPicRadio" value="-6" id="AIPic6" name="AIPic">
+                                </label>
+                                
+                            </div>
+                        </div>
+
+                        
+                   
+                    </fieldset>
+                    <div class="ValidateError" id="pp-val"></div>
+                    <div class="ValidateError" id="pp-val-en"></div>
+
+                    <input type="text" name="profile-picture-id" id="result" pattern="" required disabled hidden>
+
                     <br>
                     <div class="Reply-Frame-navigation">
                         <a class="Reply-Frame-navigation-Button lang lang-en" href="#Reply-username"
-                            role="button">Back</a>
+                        role="button">Back</a>
                         <a class="Reply-Frame-navigation-Button lang lang-nl" href="#Reply-username"
-                            role="button">Vorige</a>
-                        <a class="Reply-Frame-navigation-Button lang lang-en" href="#Reply-username03"
-                            role="button">Next</a>
-                        <a class="Reply-Frame-navigation-Button lang lang-nl" href="#Reply-username03"
-                            role="button">Volgende</a>
+                        role="button">Vorige</a>
+                        <a class="Reply-Frame-navigation-Button lang lang-en" href="#Reply-username03" onclick="return validateForm(event, 
+                        ['result'], 
+                        ['pp-val-en'], 
+                        ['pls setup your profile picture'], 
+                        [''])">Next</a>
+                        <a class="Reply-Frame-navigation-Button lang lang-nl" href="#Reply-username03" onclick="return validateForm(event, 
+                        ['result'], 
+                        ['pp-val'], 
+                        ['stel eerst je profiel foto in'], 
+                        [''])">Volgende</a>
                     </div>
                 </div>
             </div>
 
             <div id="Reply-username03" class="Reply-Frame-main">
                 <div class="Reply-Frame-content">
-                    <label class="lang lang-en" for="username">your username</label>
-                    <label class="lang lang-nl" for="username">je gebruikersnaam</label>
-                    <input type="text" name="username" id="username">
-                    <br>
-                    <p class="input-desc lang lang-en">--</p>
-                    <p class="input-desc lang lang-nl">--</p>
+                    <label class="lang lang-en" for="coment">Your coment</label>
+                    <label class="lang lang-nl" for="coment">Schrijf je review</label>
+                    <textarea type="text" name="coment" id="coment" required></textarea>
                     <br>
                     <div class="Reply-Frame-navigation">
                         <a class="Reply-Frame-navigation-Button lang lang-en" href="#Reply-username02"
                             role="button">Back</a>
                         <a class="Reply-Frame-navigation-Button lang lang-nl" href="#Reply-username02"
                             role="button">Vorige</a>
+                        <input type="submit" class="lang lang-en" value="Submit">
+                        <input type="submit" class="lang lang-nl" value="Indienen">
                     </div>
                 </div>
             </div>
@@ -368,6 +435,54 @@
 
         })
 
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            function FormHandler() {
+                const Result = document.getElementById('result');
+
+                const AiImages = document.querySelectorAll('.AiPicRadio');
+
+                const UserIdInput = document.getElementById('userID');
+
+                const ComentButtons = document.querySelectorAll('.coment-button');
+
+                const CloseForm = document.getElementById('CloseTheForm');
+
+                const Form = document.getElementById('Reply-Frame');
+
+                CloseForm.addEventListener("click", function (event) {
+                    Form.style.display = "none";
+                });
+
+                ComentButtons.forEach(Coment => {
+                    Coment.addEventListener("click", function (event) {
+                        Form.style.display = "block"
+                    });
+                });
+
+                UserIdInput.addEventListener("change", function (event) {
+                    var ID = event.target.value;
+                    console.log(ID);
+                    Result.value = ID;
+                    console.log(Result);
+                });
+
+                AiImages.forEach(Radio => {
+                    Radio.addEventListener("change", function (event) {
+                        var ID = event.target.value;
+                        console.log(ID);
+                        Result.value = ID;
+                        console.log(Result);
+                    });
+                });
+            };
+
+            setTimeout(FormHandler, 3000)
+
+        });
     </script>
 
 <script>
