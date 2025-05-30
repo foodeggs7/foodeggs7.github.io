@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         function AddPFP(userThumb){
                             var userPic = NewComent.querySelector('.User-Pic');
                             if (userThumb > 0) {
-                                var api = `https://thumbnails.roproxy.com/v1/users/avatar?userIds=${userThumb}&size=30x30&format=Png&isCircular=false`
+                                var api = `https://thumbnails.roproxy.com/v1/users/avatar-headshot?userIds=${userThumb}&size=150x150&format=Png&isCircular=false`
 
                                 fetch(api)
                                     .then(response => response.json())
